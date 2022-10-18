@@ -1,0 +1,35 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model CMS_Solution.WebRuby.ViewModel.ProductMapViewModel
+@{
+    var _detail = (Model.SeoSetting != null) ? Model.SeoSetting : new Business.Entities.SeoSettings();
+    Layout = "";
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle);
+    //meta
+    Html.AddMetaDescriptionParts(_detail.MetaDescriptions);
+    Html.AddMetaKeywordParts(_detail.MetaKeywords);
+}
+@if (Model != null && Model.Product != null && Model.Product.Any())
+{
+    foreach (var item in Model.Product)
+    {
+        <section class="col-lg-4 col-md-4 col-sm-6 col-m-5">
+            @Html.Partial("_ProductBox", item)
+        </section>
+    }
+    var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
+    if (!pager.IsEmpty())
+    {
+        <section class="col-lg-12 col-md-12 col-sm-12 col-m-12">
+            <div class="pager mt-0 pt-0 mb-3 filter-search-pager">
+                @pager
+            </div>
+        </section>
+    }
+}
+else
+{
+    <div><h4>Không tìm thấy sản phẩm</h4></div>
+}

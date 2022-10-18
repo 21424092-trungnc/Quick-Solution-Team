@@ -1,0 +1,14 @@
+﻿@model List<Business.Entities.Domain.ProductMap>
+@if (Model != null && Model.Any())
+{
+    <section class="more-product all-product">
+        <h2 class="title-about">Sản phẩm liên quan</h2>
+        <section class="row">
+            @foreach (var item in Model)
+            {
+             <section class="col-lg-3 col-md-3 col-sm-6 col-m-5"> @Html.Partial("_ProductBox", item)</section>
+            }
+        </section>
+    </section>
+}
+

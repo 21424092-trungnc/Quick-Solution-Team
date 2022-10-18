@@ -1,0 +1,91 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@model  CMS_Solution.WebRuby.ViewModel.GymSetupDetailViewModel
+@{
+    var _detail = Model.Detail;
+    var _newsSame = (Model.ListSameCategory != null) ? Model.ListSameCategory : null;
+
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //title
+    Html.AddTitleParts(Model.Detail!=null && !String.IsNullOrEmpty(Model.Detail.MetaTitle) ? Model.Detail.MetaTitle : Model.Detail.GymSetupTitle);
+    //meta
+    Html.AddMetaDescriptionParts(Model.Detail.MetaDescription);
+    Html.AddMetaKeywordParts(Model.Detail.MetaKeyWords);
+    //page class
+    Html.AppendPageCssClassParts("html-news-list-page");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(_detail.GymSetupTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(_detail.MetaDescription)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"fb:app_id\" content='259844368091705' />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image:width\" content=\"480\"/>");
+    Html.AddHeadCustomParts("<meta property=\"og:image:height\" content='360'/>");
+    Html.AddHeadCustomParts("<meta name='msapplication-config' content='browserconfig.xml'/>");
+    //Twitter META tags
+    Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(_detail.GymSetupTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(_detail.MetaDescription)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+}
+@section Breadcrumb
+{
+    <section class="background-about">
+        <section class="bg-about">
+            <h1></h1>
+        </section>
+    </section>
+    <section class="container mg-crumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Gói setup phòng tập</a></li>
+            <li class="breadcrumb-item active">@_detail.GymSetupTitle</li>
+        </ul>
+    </section>
+}
+
+<section class="bg-package">
+    <section class="container">
+        <section class="content-news">
+            @Html.Raw((_detail.Content != null ? (_detail.Content.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : ""))
+        </section>
+
+        <section class="sign-up-now trial">
+            <h2 class="title-about">Đăng ký sử dụng</h2>
+            @Html.Partial("GymSetupRegister", Model.GymTrial)         
+        </section>
+
+        @if (_newsSame != null)
+        {
+            <section class="more-news">
+                <h2 class="title-about">Có thể bạn quan tâm</h2>
+                <section class="row">
+                    @foreach (var item in _newsSame)
+                    {
+                        <section class="col-lg-4 col-md-4 col-sm-12">
+                            <section class="package">
+                                <img src="@item.IMAGEURL" alt="@item.SETUPSERVICETITLE">
+                                <section class="abs info-package">
+                                    <span></span>
+                                    <h3><a href="@Url.RouteUrl("GymSetupItem", new { SeName =  item.SEONAME.ToLower() })">@item.SETUPSERVICETITLE</a></h3>
+                                    <p>1 tỷ</p>
+                                    <a href="@Url.RouteUrl("GymSetupItem", new { SeName =  item.SEONAME.ToLower() })" class="views">Đăng ký</a>
+                                </section>
+                            </section>
+                        </section>
+                    }
+                </section>
+            </section>
+        }
+    </section>
+</section>

@@ -1,0 +1,70 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model Business.Entities.GymTrialAdd
+<form role="form" id="form-GymTrialAdd" class="form-apply">
+    @Html.HiddenFor(model => model.SETUPSERVICEID)
+    @Html.TextBoxFor(model => model.FULLNAME, new
+                       {
+                           @class = "",
+                           @placeholder = "Họ và tên",
+                           @data_rule_required = "true",
+                           @data_msg_required = "Vui lòng nhập Họ và tên!!!",
+                           @maxlength = 50
+                       })
+    <section class="clear"></section>
+    @Html.TextBoxFor(model => model.EMAIL, new
+                      {
+                          @class = "",
+                          @placeholder = "Email",
+                          @data_rule_required = "true",
+                          @data_msg_required = "Vui lòng nhập Email!!!",
+                          @maxlength = 200
+                      })
+    <section class="clear"></section>
+    @Html.TextBoxFor(model => model.PHONENUMBER, new
+                      {
+                          @class = "",
+                          @placeholder = "Số điện thoại",
+                          @data_rule_required = "true",
+                          @data_msg_required = "Vui lòng nhập Số điện thoại!!!",
+                          @maxlength = 200
+                      })
+    <section class="clear"></section>
+    @Html.TextBoxFor(model => model.ADDRESS, new
+                   {
+                       @class = "",
+                       @placeholder = "Địa chỉ",
+                       @data_rule_required = "true",
+                       @data_msg_required = "Vui lòng nhập Địa chỉ!!!",
+                       @maxlength = 250
+                   })
+    <section class="clear"></section>
+    @Html.TextAreaFor(model => model.CONTENTREGISTRATION, new
+                          {
+                              @class = "",
+                              @placeholder = "Nội dung",
+                              @maxlength = 1000
+                          })
+    <section class="clear"></section>
+    <button type="button" id="btnSave">Đăng ký</button>
+</form>
+
+@{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/GymSetup/GymSetupRegister.min.js")"></script>
+}
+<script>
+    $(document).ready(function () {
+        if (Common.Empty(Common.GymSetupRegister)) {
+            Common.GymSetupRegister = new GymSetupRegister({
+                Url: {
+                    Register: '@Url.Action("Register", "GymSetup")',
+                    UploadFile: '@Url.Action("UploadFile", "Common")',
+                },
+            });
+        }
+        else {
+            Common.GymSetupRegister.RegisterEvent();
+        }
+    });
+</script>

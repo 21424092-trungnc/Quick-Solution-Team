@@ -1,0 +1,112 @@
+﻿@using Core.Common.UI;
+@model CMS_Solution.WebRuby.ViewModel.RegisterViewModel
+@{
+    /**/
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //title
+    Html.AddTitleParts("Đăng ký");
+}
+@{
+    <style type="text/css" src="@Url.Content("~/Content/Customer/register.min.css")"></style>
+}
+<section class="main-checkout bg-login" style="padding-top: 115px !important; clear: both">
+    <section class="container">
+        <section class="row">
+            <section class="col-md-5 col-sm-12">
+                <h1 class="title-about">Đăng ký.</h1>
+                <form role="form" id="form-InsUpd" class="form">
+                    <section class="position-relative">
+                        <label for="name">Họ tên <span class="text-danger">(*)</span></label>
+                        @Html.TextBoxFor(model => model.FullName, new
+                             {
+                                 @class = "fullname w-50",
+                                 @placeholder = "",
+                                 @data_rule_required = "true",
+                                 @data_msg_required = "Vui lòng nhập họ tên của bạn!!!",
+                                 @maxlength = 250,
+                             })
+                        <select id="Gender" name="Gender" class="gender w-25">
+                            <option value="1">Anh</option>
+                            <option value="0">Chị</option>
+                        </select>
+                    </section>
+
+                  
+                    <section class="position-relative">
+                        <label for="phone">Điện thoại <span class="text-danger">(*)</span></label>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new
+                   {
+                       @class = "",
+                       @placeholder = "",
+                       @data_rule_required = "true",
+                       @data_msg_required = "Vui lòng điền số điện thoại!!!",
+                       @maxlength = 11,
+                       @data_rule_phone = "true",
+                       @data_rule_min_length = "10",
+                       @data_msg_min_length = "Số điện thoại phải có ít nhất 10 số"
+                   })
+                    </section>
+                    <section class="position-relative">
+                        <label for="email">Email <span class="text-danger">(*)</span></label>
+                        @Html.TextBoxFor(model => model.Email, new
+                   {
+                       @class = "",
+                       @placeholder = "",
+                       @data_rule_required = "true",
+                       @data_msg_required = "Vui lòng email của bạn!!!",
+                       @data_rule_email = "true",
+                       @data_msg_email = "Vui lòng nhập email đúng định dạng!!!",
+                       @maxlength = 250
+                   })
+                    </section>
+                    <section class="position-relative">
+                        <label for="pass">Mật khẩu <span class="text-danger">(*)</span></label>
+                        @Html.PasswordFor(model => model.Password, new
+                        {
+                            @class = "",
+                            @placeholder = "",
+                            @data_rule_required = "true",
+                            @data_msg_required = "Vui lòng nhập mật khẩu!!!",
+                            @maxlength = 50
+                        })
+                    </section>
+                    <section class="position-relative">
+                        <label for="repass">Nhập lại MK <span class="text-danger">(*)</span></label>
+                        @Html.PasswordFor(model => model.RePassword, new
+                       {
+                           @class = "",
+                           @placeholder = "",
+                           @data_rule_required = "true",
+                           @data_msg_required = "Vui lòng nhập lại mật khẩu!!!",
+                           @maxlength = 50
+                       })
+                    </section>
+                    <p class="sign">Bằng việc nhấp vào “Đăng ký”, bạn đã đồng ý với <a href="#">Quy định và điều khoản</a> của chúng tôi</p>
+                    @Html.HiddenFor(model => model.GoogleID)
+                    @Html.HiddenFor(model => model.FacebookID)
+                    @Html.HiddenFor(model => model.TypeRegister)
+                </form>
+                <button type="submit" id="btnSave">Đăng ký</button>
+            </section>
+        </section>
+    </section>
+</section>
+
+@{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Customer/Register.min.js")"></script>
+}
+<script>
+    $(document).ready(function () {
+        if (Common.Empty(Common.Register)) {
+            Common.Register = new Register({
+                Url: {
+                    Create: '@Url.Action("CreateRegister", "Customer")',
+                   
+                },
+            });
+        }
+        else {
+            Common.Register.Register();
+        }
+    });
+</script>

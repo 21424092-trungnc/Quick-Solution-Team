@@ -1,0 +1,512 @@
+ERROR 2020-03-04 23:44:58,158 102719ms ErrorLogger            LogError           - Exception: The request was aborted: The operation has timed out. -- info message: Request to http://service.rubyfitness.vn/DungChungService.svcDC/CMS_WebsiteCategory_Get failed with status code 0, parameters: key=1, and content: 
+ERROR 2020-03-04 23:44:58,194 102755ms ErrorLogger            LogError           - Exception: The request was aborted: The operation has timed out. -- info message: Request to http://service.rubyfitness.vn/DungChungService.svcDC/CMS_WebsiteCategory_Get failed with status code 0, parameters: key=1, and content: 
+ERROR 2020-03-04 23:44:58,197 102758ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-03-04 23:45:31,489 136050ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-04 23:45:34,800 139360ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-04 23:45:43,205 147766ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-05 22:08:51,512 250095ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:09:30,238 288820ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:11:00,816 379399ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:13:08,568 507151ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:14:08,214  2454ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command, String pagenumber) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:19:20,966 315205ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command, String pagenumber) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:27:14,544  8274ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command, String pagenumber) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 22:58:44,250 72186ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-05 23:56:40,719 437660ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-06 00:12:12,469 1369411ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-03-06 22:45:07,616 129826ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/DungChungService.svcDC/GetUrlRecord failed with status code 0, parameters: slug=tin-gym-30-30, and content: 
+ERROR 2020-03-06 22:45:07,638 129848ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCTCATEGORY_GetList_Web failed with status code 0, parameters: application/json={"KeyCache":"MD_PRODUCTCATEGORY_Index_PageIndex_1","PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:45:07,668 129878ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCTCATEGORY_GetList_Web failed with status code 0, parameters: application/json={"KeyCache":"MD_PRODUCTCATEGORY_Index_PageIndex_1","PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:45:07,668 129878ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/DungChungService.svcDC/GetUrlRecord failed with status code 0, parameters: slug=tin-gym-30-30, and content: 
+ERROR 2020-03-06 22:50:30,239 452449ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/DungChungService.svcDC/CMS_StaticContent_Get failed with status code 0, parameters: systemname=AboutHome, and content: 
+ERROR 2020-03-06 22:50:30,241 452451ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCT_GetList_Web failed with status code 0, parameters: application/json={"Keyword":null,"ProductCategoryId":0,"IsHighLigh":null,"IsSellWell":null,"IsPromotion":1,"ProductAttributeId":null,"PriceFrom":0.0,"PriceTo":0.0,"PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:50:30,243 452453ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/DungChungService.svcDC/CMS_StaticContent_Get failed with status code 0, parameters: systemname=AboutHome, and content: 
+ERROR 2020-03-06 22:50:30,243 452453ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCT_GetList_Web failed with status code 0, parameters: application/json={"Keyword":null,"ProductCategoryId":0,"IsHighLigh":1,"IsSellWell":null,"IsPromotion":null,"ProductAttributeId":null,"PriceFrom":0.0,"PriceTo":0.0,"PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:50:30,244 452454ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCT_GetList_Web failed with status code 0, parameters: application/json={"Keyword":null,"ProductCategoryId":0,"IsHighLigh":null,"IsSellWell":null,"IsPromotion":1,"ProductAttributeId":null,"PriceFrom":0.0,"PriceTo":0.0,"PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:50:30,281 452491ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/ProductService.svcMD/MD_PRODUCT_GetList_Web failed with status code 0, parameters: application/json={"Keyword":null,"ProductCategoryId":0,"IsHighLigh":1,"IsSellWell":null,"IsPromotion":null,"ProductAttributeId":null,"PriceFrom":0.0,"PriceTo":0.0,"PageSize":8,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:50:30,282 452492ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-03-06 22:52:32,050 574260ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/NewsService.svcNEWS/NEWS_GetList failed with status code 0, parameters: application/json={"IsHotNews":null,"IsHighLight":1,"IsVideo":null,"IsShowHome":1,"IsShowNotify":null,"IsActive":1,"IsSystem":null,"NewsCategoryID":null,"PageSize":3,"PageIndex":1}, and content: 
+ERROR 2020-03-06 22:52:32,058 574268ms ErrorLogger            LogError           - Exception: The operation has timed out -- info message: Request to http://localhost:8024/NewsService.svcNEWS/NEWS_GetList failed with status code 0, parameters: application/json={"IsHotNews":null,"IsHighLight":1,"IsVideo":null,"IsShowHome":1,"IsShowNotify":null,"IsActive":1,"IsSystem":null,"NewsCategoryID":null,"PageSize":3,"PageIndex":1}, and content: 
+ERROR 2020-03-08 16:51:51,160  1503ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 16:54:45,144  4821ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 17:05:45,143 664820ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 17:13:04,265 1103942ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 17:14:09,721 1169397ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 17:14:55,870 1215546ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 17:15:18,542 1238219ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-03-08 23:52:04,548 458295ms CartController         Index              - Cart error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.Index() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 33--
+ERROR 2020-03-08 23:55:05,423 639171ms CartController         Index              - Cart error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.Index() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 33--
+ERROR 2020-03-09 21:12:24,899 1252959ms CartController         Index              - Cart error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.Index() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 33--
+ERROR 2020-03-10 21:58:03,133 2698371ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 21:58:29,627 2724865ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 21:58:53,096 2748334ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 21:59:34,651 2789889ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:11:28,055 3503293ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:17:32,756 3867994ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:18:38,090 3933327ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:19:06,303 3961541ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:19:36,721 3991959ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:29:23,313 4578551ms CartController         AddItemToCart      - AddItemToCard error: Object reference not set to an instance of an object.--   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCart(CartAdd mapAdd) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 75--
+ERROR 2020-03-10 22:45:37,868 110805ms CartController         temToCartPromotion - AddItemToCard error: Value cannot be null.
+Parameter name: value--   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-10 22:47:44,886 237823ms CartController         temToCartPromotion - AddItemToCard error: Value cannot be null.
+Parameter name: value--   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-10 22:49:38,966 351903ms CartController         temToCartPromotion - AddItemToCard error: Value cannot be null.
+Parameter name: value--   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-10 22:52:33,336 526273ms CartController         temToCartPromotion - AddItemToCard error: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'Business.Entities.Domain.CartAdd' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.--   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-10 22:53:31,028 583966ms CartController         temToCartPromotion - AddItemToCard error: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'Business.Entities.Domain.CartAdd' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.--   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-10 22:56:45,483 778420ms CartController         temToCartPromotion - AddItemToCard error: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'Business.Entities.Domain.CartAdd' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.--   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at CMS_Solution.WebRuby.Controllers.CartController.AddItemToCartPromotion() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CartController.cs:line 116--
+ERROR 2020-03-12 21:07:11,250 1448921ms ErrorLogger            LogError           - Exception: The request was aborted: The operation has timed out. -- info message: Request to http://localhost:8024/CartService.svcSL/SL_CART_GetList failed with status code 0, parameters: application/json={"MemberId":0,"CookieId":"8e5d184a-0f67-46e2-a40a-21846ced819d20200309105742PM","PageSize":10,"PageIndex":1}, and content: 
+ERROR 2020-03-12 21:07:11,276 1448947ms ErrorLogger            LogError           - Exception: The request was aborted: The operation has timed out. -- info message: Request to http://localhost:8024/CartService.svcSL/SL_CART_GetList failed with status code 0, parameters: application/json={"MemberId":0,"CookieId":"8e5d184a-0f67-46e2-a40a-21846ced819d20200309105742PM","PageSize":10,"PageIndex":1}, and content: 
+ERROR 2020-03-15 12:16:54,859 18347ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-03-15 12:17:08,140 31627ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-03-15 19:22:45,700 31643ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-04-18 20:46:39,230  3041ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 20:46:41,446  5257ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 20:46:44,278  8088ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 20:46:44,430  8241ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 20:46:51,935 15746ms CatalogController      Manufacturer       - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Manufacturer(Int64 ManufacturerId, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 354--
+ERROR 2020-04-18 20:47:48,435 72245ms CatalogController      Manufacturer       - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Manufacturer(Int64 ManufacturerId, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 354--
+ERROR 2020-04-18 20:48:34,938 118748ms CatalogController      Manufacturer       - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Manufacturer(Int64 ManufacturerId, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 354--
+ERROR 2020-04-18 20:54:20,272 22984ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 20:54:20,811 23523ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 20:56:03,456 126168ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 20:56:03,754 126466ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 20:56:13,091 135803ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 20:56:13,542 136254ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 21:11:37,107 31744ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:11:46,600 41237ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:11:49,253 43890ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:12:07,315 61952ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:14:08,690 183327ms CatalogController      ibuteProductSearch - CatalogController FilterAttributeProductSearch error: Input string was not in a correct format.--   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.FilterAttributeProductSearch(String id, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 209--
+ERROR 2020-04-18 21:14:18,571 193208ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:15:05,768 240405ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-18 21:22:59,095 713732ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 21:22:59,380 714017ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 21:23:43,188 757825ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 21:23:43,374 758010ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-18 21:23:47,624 762261ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-18 21:23:48,030 762667ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-19 20:23:53,711  6787ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 20:23:55,571  8646ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-19 22:24:08,886 1666259ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 22:27:38,531 1875903ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 22:27:47,038 1884411ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 22:27:47,835 1885208ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 22:29:03,657 1961030ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-19 22:31:19,205 2096578ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-20 19:19:02,209 1057605ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:19:10,187 1065583ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:21:28,730  3996ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:21:41,415 16681ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:21:44,490 19756ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:21:50,172 25438ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:22:02,944 38210ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 19:25:33,145 248411ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2020-04-20 21:11:55,683 1010052ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-20 21:15:08,414 1202783ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-20 21:30:24,093 603770ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-22 22:03:33,188  1378ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-22 22:31:44,957 1693146ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-24 20:53:37,373 29716ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-04-24 20:53:38,100 30443ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-04-24 20:53:38,308 30651ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-04-24 20:53:38,408 30751ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-04-26 20:42:29,738 33901ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-04-26 20:42:29,918 34081ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-05-09 14:42:40,851 16585ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-05-09 14:42:41,598 17332ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-13 23:25:36,489 29584ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-05-13 23:25:37,183 30278ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-13 23:25:37,399 30494ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-05-13 23:25:37,497 30592ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-05-13 23:26:00,964 54059ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-05-13 23:26:01,026 54121ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-13 23:26:01,036 54131ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-13 23:26:01,169 54264ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-05-13 23:26:01,183 54278ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-05-14 21:42:10,025 29822ms BaseController         HomeBanner         - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.HomeBanner() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 94--
+ERROR 2020-05-14 21:42:10,893 30691ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-14 21:42:11,183 30981ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2020-05-14 21:42:11,317 31115ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 133--
+ERROR 2020-05-14 21:42:33,519 53317ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-14 21:42:36,178 55975ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-14 21:42:39,145 58942ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2020-05-14 21:42:42,143 61941ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in F:\Out\ReactJs\RuByASPNET\Sources\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in F:\Out\ReactJs\RuByASPNET\Sources\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--

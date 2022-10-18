@@ -1,0 +1,92 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@model  CMS_Solution.WebRuby.ViewModel.AboutViewModel
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Html.AddTitleParts("Giới thiệu-Ruby Fitness");
+}
+
+<section class="background-about">
+    <section class="bg-about">
+        <h1>Giới thiệu</h1>
+    </section>
+</section>
+<section class="container mg-crumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.RouteUrl("HomePage")">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Giới thiệu</li>
+    </ul>
+</section>
+@*<section class="top-about">
+    <section class="container">
+        <section class="row">
+            @Html.Raw((Model.staticContentMap != null ? (Model.staticContentMap.StaticContent.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : ""))
+        </section>
+    </section>
+</section>*@
+@*<section class="organization">
+    <section class="container">
+        <section class="row">
+            <section class="col-lg-6 col-md-6 col-sm-12">
+                <h2 class="title-about">Bộ máy nhân sự.</h2>
+                <p>Cùng với Ban lãnh đạo đội ngũ nhân viên con người của Ruby Fitness được sàng lọc, tuyển chọn từ những người nhiệt huyết, đam mê nhất.</p>
+            </section>
+            <section class="col-lg-6 col-md-6 col-sm-12 use-scroll">
+                <section class="box-user owl-carousel">
+                    @if (Model != null)
+                    {
+                        var _lstUserMap = (Model.lstUserMap != null && Model.lstUserMap.Count() > 0) ? Model.lstUserMap : new List<Business.Entities.Domain.UserMap>();
+                        foreach (var item in _lstUserMap)
+                        {
+                            <section class="user">
+                                <a href="#"><img src="@CommonWebsite.UrlWebsite@item.Image" alt="Avata"></a>
+                                <h3>@item.FullName</h3>
+                                <p>@item.UserGroupName</p>
+                            </section>
+                        }
+                    }
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<section class="office">
+    <section class="container">
+        <h2 class="title-about">@Html.Raw((Model.branchMap != null ? (Model.branchMap.StaticTitle.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : "")).</h2>
+        @Html.Raw((Model.branchMap != null ? (Model.branchMap.StaticContent ?? "") : ""))
+    </section>
+</section>
+<section class="partner">
+    <section class="container">
+        @Html.Raw((Model.partnerContentMap != null ? (Model.partnerContentMap.StaticContent.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : ""))
+    </section>
+</section>*@
+
+
+<section class="top-about">
+    <section class="container">
+        <section class="row justify-content-center">
+            <section class="col-lg-12 col-md-12 col-sm-12 info-about-top">
+                <h2 class="title-about">Giới thiệu chung.</h2>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-02.jpg" alt="CN1"></p>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-03.jpg" alt="CN1"></p>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-04.jpg" alt="CN1"></p>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-06.jpg" alt="CN1"></p>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-08.jpg" alt="CN1"></p>
+                <p><img src="/image/rubyfitness_profile-cong-ty_fi-9-09.jpg" alt="CN1"></p>
+            </section>
+        </section>
+    </section>
+</section>

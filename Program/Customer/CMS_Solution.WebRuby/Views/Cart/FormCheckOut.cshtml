@@ -1,0 +1,348 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@model CMS_Solution.WebRuby.ViewModel.CheckOutViewModel
+@{
+    /**/
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //title
+    Html.AddTitleParts("Thông tin thanh toán");
+    string _checked = "";
+    long _TotalPrice = 0;
+}
+@Html.Partial("Partial/HeaderCartPartial", null)
+
+<section class="main-checkout">
+    <section class="container">
+        <form role="form" id="form-InsUpd" class="form">
+            <section class="row justify-content-between">
+                <section class="col-lg-6 col-md-6 col-sm-12">
+                    <h3>Thông tin thanh toán</h3>
+                    <section class="position-relative">
+                        <label for="name">Họ tên <span>*</span></label>
+                        <input type="text" id="FullName" maxlength="250" name="FullName" value="@Model.AccountDetail.FullName" data-msg-required="Vui lòng nhập họ tên của bạn!!!" data-rule-required="true" placeholder="Họ tên người mua hàng">
+                    </section>
+                    <section class="position-relative">
+                        <label for="mail">Email</label>
+                        <input type="text" id="Email" name="Email" value="@Model.AccountDetail.Email" data-msg-required="Vui lòng nhập email của bạn!!!" data-rule-email="true" data-msg-email="Email không đúng định dạng" placeholder="Địa chỉ email">
+                    </section>
+                    <section class="position-relative">
+                        <label for="phone">Số điện thoại <span>*</span></label>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" maxlength="11" value="@Model.AccountDetail.PhoneNumber" data-msg-required="Vui lòng nhập số điện thoại của bạn!!!" data-rule-required="true"
+                               data-rule-phone="true" data-rule-min-length="10" data-msg-min-length="Số điện thoại phải có ít nhất 10 số" placeholder="Số điện thoại">
+                    </section>
+                    <section class="position-relative">
+                        <label for="province">Tỉnh/TP <span>*</span></label>
+                        <select id="ProvinceID" name="ProvinceID" data-msg-required="Vui lòng chọn tỉnh thành!!!" data-rule-required="true"
+                                onchange="Common.GetDistrictByProvinceID(this)" data-name-select="DistrictID">
+                            <option value="0">-- Chọn ---</option>
+                            @if (Model.ListProvince != null && Model.ListProvince.Count > 0)
+                            {
+                                _checked = "";
+                                foreach (var item in Model.ListProvince)
+                                {
+                                    if (Model.AccountDetail != null && Model.AccountDetail.ProvinceID == item.PROVINCEID)
+                                    {
+                                        _checked = "checked=\"checked\"";
+                                    }
+                                    <option value="@item.PROVINCEID" @_checked>@item.PROVINCENAME</option>
+                                }
+                            }
+                        </select>
+                    </section>
+                    <section class="position-relative">
+                        <label for="distric">Quận/Huyện <span>*</span></label>
+                        <select id="DistrictID" name="DistrictID" required>
+                            <option value="0">-- Chọn ---</option>
+                            @if (Model.ListDistrict != null && Model.ListDistrict.Count > 0)
+                            {
+                                _checked = "";
+                                foreach (var item in Model.ListDistrict)
+                                {
+                                    if (Model.AccountDetail != null && Model.AccountDetail.DistrictID == item.DISTRICTID)
+                                    {
+                                        _checked = "checked=\"checked\"";
+                                    }
+                                    <option value="@item.DISTRICTID" @_checked>@item.DISTRICTNAME</option>
+                                }
+                            }
+                        </select>
+                    </section>
+                    <section class="position-relative">
+                        <label for="address">Địa chỉ <span>*</span></label>
+                        <input type="text" name="address" id="address" value="@Model.AccountDetail.Address" data-msg-required="Vui lòng điền địa chỉ của bạn!!!" data-rule-required="true" placeholder="Địa chỉ">
+                    </section>
+                    <section class="position-relative">
+                        <label for="content">Nội dung</label>
+                        <textarea type="text" id="Note" name="Note"></textarea>
+                    </section>
+                    <p class="note-form">* Trường bắt buộc nhập</p>
+                </section>
+                <section class="col-lg-5 col- col-md-6 col-sm-12">
+                    <h3>Giỏ hàng của bạn</h3>
+                    @if (Model.ListProdctCart != null && Model.ListProdctCart.Count > 0)
+                    {
+                        foreach (var item in Model.ListProdctCart)
+                        {
+                            //long _price = Convert.ToInt64(item.TotalPriceItem);
+                            //if (item.CartPromotion != null && item.CartPromotion.Any())
+                            //{
+                            //    foreach (var promo in item.CartPromotion)
+                            //    {
+                            //        _price = (promo.IsPercentDiscount) ? (_price - ((_price * promo.DisCountValue) / 100)) : ((promo.IsDiscountBySetPrice) ? (_price - promo.DisCountValue) : _price);
+                            //    }
+                            //}
+
+                            //_TotalPrice += Convert.ToInt64(_price);
+                            <section class="cart">
+                                <img src="@CommonWebsite.UrlWebsite@item.ProductImage" alt="@item.ProductSeoName">
+                                <h3>@item.ProductName</h3>
+                                <p w>@item.Quantity</p>
+                                @if (item.Price == 0)
+                                {
+                                    <p class="total_price">Liên hệ</p>
+                                }
+                                else
+                                {
+                                    var _price = item.Price;
+                                    if (item.CartPromotion != null && item.CartPromotion.Any())
+                                    {
+                                        foreach (var promo in item.CartPromotion)
+                                        {
+                                            if (promo.IsDiscountBySetPrice)//Giá ưu đãi. áp dụng thay giá Khuyến mại
+                                            {
+                                                _price = promo.DisCountValue;
+                                            }
+                                            if (promo.IsPercentDiscount)//giảm theo phần trăm
+                                            {
+                                                _price = _price - ((_price * promo.DisCountValue) / 100);
+                                            }
+                                            if (promo.IsFixPrice)// Trừ tiền cứng. giảm giá cứng
+                                            {
+                                                _price = _price - promo.DisCountValue;
+                                            }
+                                        }
+                                    }
+
+                                    decimal TotalPriceProduct = _price * item.Quantity;
+                                    _TotalPrice += Convert.ToInt64(TotalPriceProduct);
+                                    <p class="total_price">@String.Format("{0:#,##0}", TotalPriceProduct).Replace(',', '.') đ</p>
+                                }
+
+
+                                @*<p class="total_price">@Html.Raw(item.TotalPriceItem > 0 ? (String.Format("{0:#,##0}", Convert.ToUInt64(item.TotalPriceItem)).Replace(',', '.') + "đ") : "Liên hệ")</p>*@
+                                @if (item.CartPromotion != null && item.CartPromotion.Any())
+                                {
+                                    <div class="float-left w-100">Khuyến mại:</div>
+                                    <div class="float-left w-100">
+                                        @foreach (var promo in item.CartPromotion)
+                                        {
+                                            if (promo.IsDiscountBySetPrice)//Giá ưu đãi. áp dụng thay giá Khuyến mại
+                                            {
+                                                <div>- @promo.PromotionOfferName : @promo.DisCountValue VNĐ  </div>
+                                            }
+                                            else if (promo.IsFixedGift) //quà tặng cố định
+                                            {
+                                                <div>- Khuyến mại sản phẩm : @promo.ProductGiftsName  </div>
+                                            }
+                                            else if (promo.IsPercentDiscount)//giảm theo phần trăm
+                                            {
+                                                <div>- @promo.PromotionOfferName : @promo.DisCountValue %</div>
+                                            }
+                                            else if (promo.IsFixPrice)// Trừ tiền cứng. giảm giá cứng
+                                            {
+                                                <div>- Số tiền được khấu trừ: @String.Format("{0:#,##0}", Convert.ToInt32(promo.DisCountValue)).Replace(',', '.')  VNĐ</div>
+                                            }
+                                        }
+                                    </div>
+                                }
+                            </section>
+                        }
+                    }
+                    else
+                    {
+                        <section class="cart">
+                            <h3>Chưa có sản phẩm được chọn</h3>
+                        </section>
+                    }
+
+                    <p class="total_order text-right">Tổng thanh toán: <span>@Html.Raw(_TotalPrice > 0 ? (String.Format("{0:#,##0}", Convert.ToUInt64(_TotalPrice)).Replace(',', '.') + "đ") : "Liên hệ")</span></p>
+                </section>
+            </section>
+            <section class="row justify-content-between">
+                <div class="col-md-12">
+                    @if (Model.IsOffers == true)
+                    {
+                        <button type="button" id="btnCartOffer">Đặt hàng</button>
+                    }
+                    else
+                    {
+                        <button type="button" id="btn-Save" name="btn-Save">Đặt hàng</button>
+                    }
+
+                </div>
+            </section>
+        </form>
+    </section>
+</section>
+
+<!-- Modal Promotion-->
+<div class="modal fade" id="modalPromotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">CHƯƠNG TRÌNH KHUYẾN MẠI</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @if (Model.Offers != null && Model.Offers != null && Model.Offers.Count > 0 && Model.IsOffers)
+                {
+                    var ProOffers = Model.Offers;
+                    var _IsPercentDisCount = false;
+                    var _IsDisCountBySetPrice = false;
+                    var _IsFixedGift = false;
+                    var _IsFixPrice = false;
+                    foreach (var item in ProOffers)
+                    {
+                        if (item.IsFixedGift)//quà tặng cố định
+                        {
+                            _IsFixedGift = true;
+                        }
+                        else if (item.IsDisCountBySetPrice) //Giá ưu đãi. áp dụng thay giá Khuyến mại
+                        {
+                            _IsDisCountBySetPrice = true;
+                        }
+                        else if (item.IsPercentDisCount)
+                        { //giarm theo phần trăm
+                            _IsPercentDisCount = true;
+                        }
+                        else if (item.IsFixPrice) // Trừ tiền cứng. giảm giá cứng
+                        {
+                            _IsFixPrice = true;
+                        }
+                    }
+
+                    if (_IsFixedGift)
+                    {
+                        <div class="row">
+                            <div class="col-md-12 font-weight-bold">Danh sách quà tặng</div>
+                            <div id="div-quatang" class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Chọn</th>
+                                            <th>Mã Sản Phẩm</th>
+                                            <th>Tên Sản Phẩm</th>
+                                            @*<th>Khuyễn Mại</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var items in ProOffers)
+                                        {
+                                            if (items.IsFixedGift == true)
+                                            {
+                                                foreach (var item in items.ListGifts)
+                                                {
+                                                    <tr name="item" data-key="IsFixedGift" data-isapply="@items.IsApplyWithOrderPromotion">
+                                                        <td>
+                                                            <input inp-key="IsFixedGift" data-key="inp-Offer" type="checkbox" value="@item.ProductId" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@items.PromotionId"
+                                                                   data-productgiftsid="@item.ProductGiftsId" data-productid="0" data-discountvalue="0" />
+                                                        </td>
+                                                        <td>@item.ProductCode</td>
+                                                        <td>@item.ProductName</td>
+                                                    </tr>
+                                                }
+
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    }
+                    if (_IsPercentDisCount || _IsDisCountBySetPrice || _IsFixPrice)
+                    {
+                        <div class="row">
+                            <div class="col-md-12 font-weight-bold">Mã giảm giá</div>
+                            <div id="div-magiamgia" class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Chọn</th>
+                                            <th>Khuyễn Mại</th>
+                                            <th>Giá trị</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in ProOffers)
+                                        {
+                                            if (item.IsFixPrice == true)
+                                            {
+                                                <tr name="item" data-key="IsFixPrice" data-isapply="@item.IsApplyWithOrderPromotion">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="VNĐ" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="0" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@String.Format("{0:#,##0}", Convert.ToUInt64(item.DisCountValue)).Replace(',', '.')  VNĐ</td>
+                                                </tr>
+                                            }
+                                            if (item.IsPercentDisCount == true)
+                                            {
+                                                <tr name="item" data-key="IsPercentDisCount" data-isapply="@item.IsApplyWithOrderPromotion">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="%" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="0" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@item.DisCountValue %</td>
+                                                </tr>
+                                            }
+                                            if (item.IsDisCountBySetPrice == true)
+                                            {
+                                                <tr name="item" data-key="IsDisCountBySetPrice" data-isapply="@item.IsApplyWithOrderPromotion">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="VNĐ" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="0" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@item.DisCountValue VNĐ</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="p-1 text-right">
+                <button type="button" id="SaveCartPromotion" class="btn btn-primary">Tiếp tục</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Cart/CheckOut.min.js")"></script>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (Common.Empty(Common.CheckOut)) {
+            Common.CheckOut = new CheckOut({
+                Url: {
+                    Create: '@Url.Action("SaveInfoCheckOut", "Cart")',
+                    CreatePromotion: '@Url.Action("SaveInfoCheckOutPromotion", "Cart")',
+                },
+            });
+        }
+        else {
+            Common.CheckOut.Register();
+        }
+    });
+</script>
+

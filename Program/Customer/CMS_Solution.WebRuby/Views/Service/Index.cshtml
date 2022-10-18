@@ -1,0 +1,35 @@
+﻿@using Core.Common.UI;
+@model List<Business.Entities.Domain.ServiceMap>
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Html.AddTitleParts("Dịch vụ-Ruby Fitness");
+}
+<section class="background-about">
+    <section class="bg-about">
+        <h1>Dịch vụ</h1>
+    </section>
+</section>
+<section class="container mg-crumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.RouteUrl("HomePage")">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Dịch vụ</li>
+    </ul>
+</section>
+<section class="top-about">
+    <section class="container-fluid">
+        <section class="main-service">
+            @if (Model != null)
+            {
+                var _lstService = (Model.Count() > 0) ? Model : new List<Business.Entities.Domain.ServiceMap>();
+                foreach (var item in _lstService)
+                {
+                    <a class="service" href="@Url.RouteUrl(item.Key)">
+                        <img src="@item.Image" alt="Service">
+                        <h2><span class="text-uppercase">@item.ServiceTitle</span></h2>
+                        <p>@item.Content</p>
+                    </a>
+                }
+            }
+        </section>
+    </section>
+</section>

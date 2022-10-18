@@ -1,0 +1,138 @@
+﻿@using CMS_Solution.WebRuby.Common;
+@model List<Business.Entities.Domain.ProductMap>
+
+
+@if (Model != null && Model.Any())
+{
+    <section class="all-product">
+        <section class="container">
+            <h2 class="title-page">Sản phẩm khuyến mại</h2>
+
+            <section class="row" data-count="@Model.Count">
+                @foreach (var item in Model)
+                {
+                    string UrlImage = !string.IsNullOrEmpty(item.PictureUrl) ? CommonWebsite.UrlWebsite + item.PictureUrl : "";
+                    <section class="col-lg-3 col-md-3 col-sm-6 col-m-5">
+                        <section class="product">
+                            <a href="@Url.RouteUrl("Product", new { SeName = (item.SeoName ??"")})" title="@(item.PictureUrlAlias??"")">
+                                <img src="@UrlImage" alt="@item.PictureUrlAlias">
+                            </a>
+                            <section class="info-product">
+                                <p>
+                                    @if (item.Rating.ToString() != "" && item.Rating > 0)
+                                    {
+                                        for (int i = 0; i < Math.Round(item.Rating, 0); i++)
+                                        {
+                                            <i class="material-icons">star</i>
+                                        }
+                                        if (Math.Round(item.Rating, 0) < 5)
+                                        {
+                                            for (int i = 0; i < (5 - Math.Round(item.Rating, 0)); i++)
+                                            {
+                                                <i class="material-icons none-color">star</i>
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        for (int i = 0; i < 5; i++)
+                                        {
+                                            <i class="material-icons none-color">star</i>
+                                        }
+                                    }
+                                </p>
+                                <h3><a href="@Url.RouteUrl("Product", new { SeName = item.SeoName})" title="@item.ProductNameShowWeb" id="@item.ProductId">@item.ProductNameShowWeb</a></h3>
+                                <p class="price">
+                                    @if (string.IsNullOrEmpty(item.PriceOld) && (item.PriceNew == "0" || string.IsNullOrEmpty(item.PriceNew)))
+                                    {
+                                        @Html.Raw("Liên hệ")
+                                    }
+                                    else
+                                    {
+                                        @Html.Raw(item.PriceNew != "0" ? item.PriceNew : item.PriceOld)
+                                        if (!string.IsNullOrEmpty(item.PriceOld) && item.PriceNew != "0")
+                                        {
+                                            <span class="proice-old">@item.PriceOld</span>
+                                        }
+                                    }
+                                </p>
+                                @*<a href="javascript:void(0)" data-id="@item.ProductId" class="buy" onclick="Common.AddProductToCart.AddToCart(this)">Mua ngay</a>*@
+                                @*<a href="@Url.RouteUrl("Product", new { SeName = item.SeoName})" title="@item.ProductNameShowWeb" data-id="@item.ProductId" class="buy">Chi tiết</a>*@
+                            </section>
+                            <section class="abs label-product">
+                                @if (item.Isnews)
+                                {
+                                    <p>News</p>
+                                }
+                                @if (!string.IsNullOrEmpty(item.Offer))
+                                {
+                                    if (item.Offer == "Quà")
+                                    {
+                                        <p class="sale-off"><i class="fas fa-gift"></i></p>
+                                    }
+                                    else
+                                    {
+                                        <p class="sale-off">@item.Offer</p>
+                                    }
+                                }
+                            </section>
+                        </section>
+                    </section>
+                    @*@Html.Partial("_ProductBox", item)*@
+                }
+            </section>
+        </section>
+    </section>
+}
+<script type="text/javascript">
+    $('.box-product').each(function (index) {
+        let box = $(this);
+        const count = box.data('count');
+        let responsive = {
+            0: {
+                items: 2,
+                margin: 10
+            },
+            480: {
+                items: 3,
+                margin: 10
+            },
+            768: {
+                items: 3,
+                margin: 10
+            },
+            1120: {
+                items: 4,
+                margin: 20
+            },
+            1400: {
+                items: 4,
+                margin: 20
+            }
+        }
+        if (count === 3) {
+            responsive["1120"].items = 3;
+            responsive["1400"].items = 3;
+        }
+        else if (count === 2) {
+            responsive["480"].items = 2;
+            responsive["768"].items = 2;
+            responsive["1120"].items = 2;
+            responsive["1400"].items = 2;
+        }
+        else if (count === 1) {
+            responsive["0"].items = 1;
+            responsive["480"].items = 1;
+            responsive["768"].items = 1;
+            responsive["1120"].items = 1;
+            responsive["1400"].items = 1;
+        }
+        box.owlCarousel({
+            autoplay: true,
+            nav: false,
+            margin: 20,
+            loop: true,
+            responsive: responsive
+        });
+    });
+</script>

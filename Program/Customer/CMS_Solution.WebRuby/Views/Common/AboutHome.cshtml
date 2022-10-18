@@ -1,0 +1,95 @@
+﻿@model CMS_Solution.WebRuby.ViewModel.AboutHomeViewModel
+
+@*<section class="about-home">
+        <section class="row">
+            @if (Model.staticContentMap != null)
+            {
+                @Html.Raw((Model.staticContentMap != null ? (Model.staticContentMap.StaticContent.Replace("&amp;", "&")
+                                                 .Replace("&lt;", "<")
+                                                 .Replace("&gt;", ">")
+                                                 .Replace("&quot;", "\"")
+                                                 .Replace("&#039;", "\'") ?? "") : ""))
+            }
+        </section>
+    </section>*@
+<section class="cate-home">
+    <section class="container">
+        <h2 class="title-page">Dòng sản phẩm</h2>
+        <section class="box-cate-product">
+            <a href="/" class="cate-product">
+               <img src="~/image/mbh-fitness.png" alt="mbh fitness" />
+                <h2>MBH Fitness</h2>
+                <p>Với những người lần đầu tiên có phòng gym sau một thời gian</p>
+            </a>
+            <a href="/san-pham" class="cate-product">
+                <img src="~/image/gia-dinh.png" alt="Máy chạy gia đình" />
+                <h2>Thiết Bị Gia Đình</h2>
+                <p>Với những người lần đầu tiên có phòng gym sau một thời gian</p>
+            </a>
+            <a href="/san-pham" class="cate-product">
+                <img src="~/image/may-chay.png" alt="máy chạy bộ" />
+                <h2>Máy Chạy Bộ</h2>
+                <p>Với những người lần đầu tiên có phòng gym sau một thời gian</p>
+            </a>
+            <a href="/mbh-fitness" class="cate-product">
+                <img src="~/image/thu-pham.png" alt="Thực phẩm chức năng" />
+                <h2>Thực Phẩm Dinh Dưỡng</h2>
+                <p>Với những người lần đầu tiên có phòng gym sau một thời gian</p>
+            </a>
+            <a href="/san-pham" class="cate-product">
+                <img src="~/image/phu-kien.png" alt="Phụ kiện fitness" />
+                <h2>Phụ Kiện Phòng Tập</h2>
+                <p>Với những người lần đầu tiên có phòng gym sau một thời gian</p>
+            </a>
+        </section>
+    </section>
+</section>
+<section class="contact_btn">
+    <section class="container">
+        <p class="font-weight-bold"> Hãy liên hệ với chúng tôi để nhận được nhiều ưu đãi</p>
+        <a href="/lien-he" class="bg-danger">Contact now</a>
+    </section>
+</section>
+<script type="text/javascript">
+    $('.box-service').owlCarousel({
+        autoplay: true,
+        nav: false,
+        loop: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2, margin: 10,
+            },
+            768: {
+                items: 3, margin: 10,
+            },
+            1120: {
+                items: 3, margin: 10,
+            },
+            1400: {
+                items: 3
+            }
+        }
+    });
+    if (screen.width <= 768) {
+        $('.box-cate-product').addClass('owl-carousel');
+        $('.box-partner-home').addClass('owl-carousel');
+        $('.box-cate-product').owlCarousel({
+            autoplay: true,
+            nav: false,
+            loop: true,
+            items: 1,
+            margin: 20
+        });
+        $('.box-partner-home').owlCarousel({
+            autoplay: true,
+            nav: false,
+            loop: true,
+            items: 2,
+            margin: 20
+        });
+    }
+</script>

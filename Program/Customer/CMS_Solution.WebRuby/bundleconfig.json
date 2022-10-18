@@ -1,0 +1,142 @@
+[
+  {
+    "outputFileName": "Scripts/Cart/CheckOut.min.js",
+    "inputFiles": [
+      "Scripts/Cart/CheckOut.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Cart/CartAdd.min.js",
+    "inputFiles": [
+      "Scripts/Cart/CartAdd.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Customer/Login.min.js",
+    "inputFiles": [
+      "Scripts/Customer/Login.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Customer/Register.min.js",
+    "inputFiles": [
+      "Scripts/Customer/Register.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/common.min.js",
+    "inputFiles": [
+      "Scripts/common.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Recruitment/CandidateApply.min.js",
+    "inputFiles": [
+      "Scripts/Recruitment/CandidateApply.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Recruitment/Recruitment.min.js",
+    "inputFiles": [
+      "Scripts/Recruitment/Recruitment.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ProductComments/ProductComments.min.js",
+    "inputFiles": [
+      "Scripts/ProductComments/ProductComments.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/fotorama/fotorama.min.js",
+    "inputFiles": [
+      "Scripts/fotorama/fotorama.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/GymSetup/GymSetupRegister.min.js",
+    "inputFiles": [
+      "Scripts/GymSetup/GymSetupRegister.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ContactUs/ThemContactUs.min.js",
+    "inputFiles": [
+      "Scripts/ContactUs/ThemContactUs.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/jquery.nivo.slider.min.js",
+    "inputFiles": [
+      "Scripts/jquery.nivo.slider.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/respond.min.js",
+    "inputFiles": [
+      "Scripts/respond.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/fotorama/fotorama.min.css",
+    "inputFiles": [
+      "Scripts/fotorama/fotorama.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/script.min.js",
+    "inputFiles": [
+      "Scripts/script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/style.min.css",
+    "inputFiles": [
+      "Content/style.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/bundleboostrap.js",
+    "inputFiles": [
+      "Scripts/bootstrap.js",
+      "Scripts/jquery.nivo.slider.js",
+      "Scripts/owl.carousel.min.js",
+      "Scripts/respond.js",
+      "Scripts/toastr.min.js",
+      "Scripts/fotorama/fotorama.js",
+      "Scripts/script.js",
+      "Scripts/common.js",
+      "Scripts/Cart/AddProductToCart.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/bundlebootstrap.css",
+    "inputFiles": [
+      "Content/bootstrap.min.css",
+      "Content/nivo-slider.css",
+      "Content/owl.theme.default.min.css",
+      "Content/owl.carousel.min.css",
+      "Content/style.css",
+      "Content/toastr.css",
+      "Scripts/fotorama/fotorama.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Cart/AddProductToCart.min.js",
+    "inputFiles": [
+      "Scripts/Cart/AddProductToCart.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css.min.css",
+    "inputFiles": [
+      "Content/css.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/icon.min.css",
+    "inputFiles": [
+      "Content/icon.css"
+    ]
+  }
+]
