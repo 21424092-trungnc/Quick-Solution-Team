@@ -66,7 +66,7 @@ const saveTmpBase64File = (pathFile, base64) => {
 };
 
 const getPathStorage = () => {
-  return `D:\\TrungNC6\\Quick-Solution-Team-main\\Program\\Admin\\Portal\\public`;
+  return 'D:\\TrungNC6\\Quick-Solution-Team-main\\Program\\Admin\\Portal\\public';
 };
 
 const getPathUpload = () => {
