@@ -24,7 +24,6 @@ import Loading from "../Common/Loading";
 // Model(s)
 import UserGroupModel from "../../models/UserGroupModel";
 import CompanyModel from "../../models/CompanyModel";
-import BusinessModel from "../../models/BusinessModel";
 // Util(s)
 import { mapDataOptions4Select } from '../../utils/html';
 
@@ -46,7 +45,6 @@ export default class UserGroupsAdd extends Component {
     // Init model(s)
     this._userGroupsModel = new  UserGroupModel();
     this._companyModel = new CompanyModel();
-    this._businessModel = new BusinessModel();
     // Bind method(s)
     this.handleFormikSubmit = this.handleFormikSubmit.bind(this);
     this.handleFormikReset = this.handleFormikReset.bind(this); 

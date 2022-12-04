@@ -7,7 +7,6 @@ import Select from "react-select";
 import Address, { DEFAULT_COUNTRY_ID } from "../Common/Address";
 import DatePicker from "../Common/DatePicker";
 // Model(s)
-import SegmentModel from "../../models/SegmentModel";
 import AccountModel from "../../models/AccountModel";
 
 class AccountFilter extends PureComponent {
@@ -44,7 +43,6 @@ class AccountFilter extends PureComponent {
     };
 
     // Init model(s)
-    this._segmentModel = new SegmentModel();
     this._accountModel = new AccountModel();
   }
 
@@ -217,8 +215,6 @@ class AccountFilter extends PureComponent {
   };
 
   render() {
-    const { segment,typeRegister } = this.state;
-    const { businessArr } = this.props;
     return (
       <div className="ml-3 mr-3 mb-3 mt-3">
         <Form autoComplete="nope" className="zoom-scale-9">
