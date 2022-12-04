@@ -84,7 +84,7 @@ const getPathUpload = () => {
 const saveBase64 = async (folderPath, base64, fileName) => {
   try {
     let pathFolder = getPathUpload() + `/${folderPath}`;
-    console.log(pathFolder)
+    console.log(pathFolder);
     pathFolder = path.normalize(pathFolder);
 
     // Check folder exists
