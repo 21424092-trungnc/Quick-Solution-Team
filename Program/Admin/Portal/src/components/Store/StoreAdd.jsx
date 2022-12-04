@@ -25,6 +25,7 @@ import Loading from '../Common/Loading';
 
 // Model(s)
 import StoreModel from "../../models/StoreModel";
+import AreaModel from '../../models/AreaModel';
 import Address, { DEFAULT_COUNTRY_ID } from '../Common/Address';
 
 // Util(s)
@@ -43,6 +44,7 @@ export default class StoreAdd extends PureComponent {
 
     // Init model(s)
     this._storeModel = new StoreModel();
+    this._areaModel = new AreaModel();
 
     // Bind method(s)
     this.handleFormikSubmit = this.handleFormikSubmit.bind(this);

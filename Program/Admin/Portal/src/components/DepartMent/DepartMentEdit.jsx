@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // Component(s)
-import Loading from "../Common/Loading";
-import DepartmentAdd from "./DepartmentAdd";
+import Loading from '../Common/Loading';
+import DepartmentAdd from './DepartMentAdd';
 
 // Model(s)
 import DepartmentModel from "../../models/DepartmentModel";
@@ -20,7 +20,7 @@ export default class DepartmentEdit extends Component {
     // Init state
     this.state = {
       /** @var {DepartmentEnti} */
-      DepartmentEnti: null,
+      DepartmentEnti: null
     };
   }
 
@@ -29,11 +29,11 @@ export default class DepartmentEdit extends Component {
     (async () => {
       let ID = this.props.match.params.id;
       console.log(ID);
-      let DepartmentEnti = await this._departmentModel
-        .readDetail(ID)
+      let DepartmentEnti = await this._departmentModel.readDetail(ID)
         .catch(() => {
-          setTimeout(() => window._$g.rdr("/404"));
-        });
+          setTimeout(() => window._$g.rdr('/404'));
+        })
+      ;
       console.log(DepartmentEnti);
       DepartmentEnti && this.setState({ DepartmentEnti });
     })();
@@ -41,13 +41,15 @@ export default class DepartmentEdit extends Component {
   }
 
   render() {
-    let { DepartmentEnti } = this.state;
+    let {
+        DepartmentEnti,
+    } = this.state;
 
     // Ready?
     if (!DepartmentEnti) {
       return <Loading />;
     }
 
-    return <DepartmentAdd DepartmentEnti={DepartmentEnti} {...this.props} />;
+    return <DepartmentAdd DepartmentEnti={DepartmentEnti} {...this.props} />
   }
 }

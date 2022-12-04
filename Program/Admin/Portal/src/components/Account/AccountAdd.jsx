@@ -17,7 +17,10 @@ import {
   Media,
   InputGroup,
   InputGroupAddon,
+  // InputGroupText,
+  Table
 } from "reactstrap";
+import Select from "react-select";
 import moment from "moment";
 
 // Component(s)
@@ -313,10 +316,10 @@ export default class AccountAdd extends Component {
       password_confirm: values.password,
       city_id: values.province_id,
       description: values.about_me,
-      marital_status: (values.marital_status === true) ? 1 : 0,
+      marital_status: (values.marital_status == true) ? 1 : 0,
       id_card_date:(cdArr.length ? cdArr : ''),
-      is_notification: (values.is_notification === true) ? 1: 0,
-      is_can_email: (values.is_can_email === true) ? 1: 0,
+      is_notification: (values.is_notification == true) ? 1: 0,
+      is_can_email: (values.is_can_email == true) ? 1: 0,
       is_system: (values.is_system)? 1: 0,
       is_change_password: (member_id > 0) ? 0 : 1,
       is_active: (values.is_active)? 1: 0, 

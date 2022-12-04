@@ -26,6 +26,7 @@ import Loading from "../Common/Loading";
 // Model(s)
 import DepartmentModel from "../../models/DepartmentModel";
 import CompanyModel from "../../models/CompanyModel";
+import BusinessModel from "../../models/BusinessModel";
 
 // Util(s)
 import { mapDataOptions4Select } from "../../utils/html";
@@ -35,7 +36,7 @@ import { mapDataOptions4Select } from "../../utils/html";
  */
 export default class DepartMentAdd extends Component {
   /** @var {Object} */
-  formikProps = null;    
+  formikProps = null;
 
   constructor(props) {
     super(props);
@@ -43,6 +44,8 @@ export default class DepartMentAdd extends Component {
     // Init model(s)
     this._departmentModel = new DepartmentModel();
     this._companyModel = new CompanyModel();
+    this._businessModel = new BusinessModel();
+
     // Bind method(s)
     this.handleFormikSubmit = this.handleFormikSubmit.bind(this);
     this.handleFormikReset = this.handleFormikReset.bind(this);
@@ -246,7 +249,7 @@ export default class DepartMentAdd extends Component {
 
   render() {
     let { _id, ready, alerts, companies, company } = this.state;
-    let { DepartmentEnti, noEdit } = this.props;
+    let { DepartmentEnti, noEdit, detail } = this.props;
     let initialValues = this.getInitialValues();
     // Ready?
     if (!ready) {
