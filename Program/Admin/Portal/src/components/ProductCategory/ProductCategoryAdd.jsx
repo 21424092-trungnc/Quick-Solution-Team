@@ -513,7 +513,7 @@ export default class ProductCategoryAdd extends PureComponent {
                                       render={({ field/*, form*/ }) => {
                                         let defaultValue = parents.find(({ value }) => (1 * value) === (1 * field.value)) || null;
                                         let placeholder = (parents[0] && parents[0].label) || '';
-																				let groupedOptions = groupByParams(parents, 'parent_id')
+																				let groupedOptions = (parents.length > 1 && parents[0].id != '') ? groupByParams(parents, 'parent_id') : parents
 
 																				const Option = (props) => {
 																					const {

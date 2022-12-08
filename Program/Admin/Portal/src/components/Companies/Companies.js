@@ -168,9 +168,9 @@ class Companies extends PureComponent {
           data: cloneData, count
         })
       })
-      .catch(() => {
+      .catch((err) => {
         window._$g.dialogs.alert(
-          window._$g._('Bạn vui lòng chọn dòng dữ liệu cần thao tác!')
+          window._$g._('Bạn vui lòng chọn dòng dữ liệu cần thao tác!' + err.message)
         )
       })
     }

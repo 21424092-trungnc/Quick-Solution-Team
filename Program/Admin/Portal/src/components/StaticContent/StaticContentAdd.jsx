@@ -167,6 +167,7 @@ export default class StaticContentAdd extends Component {
     let formData = Object.assign({}, values, {
       is_active: 1 * values.is_active,
       is_childrent: 1 * values.is_childrent,
+      display_order: 1 * values.display_order,
       webcategory_id:
         1 * values.webcategory_id > 0
           ? 1 * values.webcategory_id

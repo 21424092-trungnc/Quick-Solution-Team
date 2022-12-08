@@ -1,4 +1,8 @@
 .DS_Store
+tags
+*.swp
+*.swo
+*.swn
 /Program/Customer/.vs
 /Program/Customer/BACKEND/Business/Business.Entities/obj
 /Program/Customer/BACKEND/Business/Business.Services/obj

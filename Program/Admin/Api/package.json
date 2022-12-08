@@ -5,8 +5,12 @@
   "author": "",
   "license": "ISC",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "lint": "eslint . --fix",
+    "lint:check": "eslint '**/*.js' --quiet",
     "start": "nodemon index.js",
     "dev": "cross-env RUN_LOCAL=yes nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

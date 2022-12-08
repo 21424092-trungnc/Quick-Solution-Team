@@ -149,8 +149,8 @@ export default class CompaniesAdd extends PureComponent {
     }
     let bundle = {companyData};
     let all = [
-      this._companyTypeModel.getOptions()
-        .then(data => (bundle['companyTypes'] = data)),
+      // this._companyTypeModel.getOptions()
+      //   .then(data => (bundle['companyTypes'] = data)),
       this._countryModel.getOptions()
           .then(data => (bundle['countries'] = data)),
       this._provinceModel.getOptions((companyData && companyData.country_id) || CountryModel.ID_VN)
@@ -348,7 +348,8 @@ export default class CompaniesAdd extends PureComponent {
 
     let {
       alerts,
-      companyTypes, companyData,
+      //companyTypes, 
+      companyData,
       countries, provinces, districts, wards
     } = this.state;
     /** @var {Object} */
@@ -424,38 +425,6 @@ export default class CompaniesAdd extends PureComponent {
                         </Col>
                         <Col xs={12}>
                           <Row>
-                            <Col xs={6}>
-                              <FormGroup row>
-                                <Label for="company_type_id" sm={4}>
-                                  Loại hình tổ chức<span className="font-weight-bold red-text">*</span>
-                                </Label>
-                                <Col sm={8}>
-                                  <Field
-                                    name="company_type_id"
-                                    render={({ field/*, form*/ }) => {
-                                      let options = companyTypes.map(({ name: label, id: value }) => ({ value, label }));
-                                      let defaultValue = options.find(({ value }) => (1 * value) === (1 * field.value));
-                                      let placeholder = (companyTypes[0] && companyTypes[0].name) || '';
-                                      return (
-                                        <Select
-                                          id="company_type_id"
-                                          name="company_type_id"
-                                          onChange={({ value }) => field.onChange({
-                                            target: { type: "select", name: "company_type_id", value }
-                                          })}
-                                          isSearchable={true}
-                                          placeholder={placeholder}
-                                          defaultValue={defaultValue}
-                                          options={options}
-                                          isDisabled={noEdit}
-                                        />
-                                      );
-                                    }}
-                                  />
-                                  <ErrorMessage name="company_type_id" component={({ children }) => <Alert color="danger" className="field-validation-error">{children}</Alert>} />
-                                </Col>
-                              </FormGroup>
-                            </Col>
                             <Col xs={6}>
                               <FormGroup row>
                                 <Label for="open_date" sm={4}>

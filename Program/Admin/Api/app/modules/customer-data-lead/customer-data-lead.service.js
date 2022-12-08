@@ -1,5 +1,5 @@
 const CustomerDataLeadClass = require('../customer-data-lead/customer-data-lead.class');
-// const TaskDataLeadClass = require('../task-data-lead/task-data-lead.class');
+const TaskDataLeadClass = require('../task-data-lead/task-data-lead.class');
 const PROCEDURE_NAME = require('../../common/const/procedureName.const');
 const apiHelper = require('../../common/helpers/api.helper');
 const mssql = require('../../models/mssql');
@@ -202,7 +202,7 @@ const detailCustomerDataLead = async (customerDataLeadId) => {
 
     if (customerDataLead && customerDataLead.length) {
       customerDataLead = CustomerDataLeadClass.detail(customerDataLead[0]);
-      // customerDataLead.task_data_leads = TaskDataLeadClass.list(taskDataLeads);
+      customerDataLead.task_data_leads = TaskDataLeadClass.list(taskDataLeads);
 
       return new ServiceResponse(true, '', customerDataLead);
     }

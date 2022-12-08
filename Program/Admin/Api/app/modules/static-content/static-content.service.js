@@ -158,13 +158,13 @@ const createStaticContentOrUpdate = async (bodyParams) => {
     //}
 
     //check system_name
-    const dataCheck = await pool.request()
-      .input('STATICCONTENTID', apiHelper.getValueFromObject(bodyParams, 'static_content_id'))
-      .input('SYSTEMNAME', apiHelper.getValueFromObject(bodyParams, 'system_name'))
-      .execute(PROCEDURE_NAME.CMS_STATICCONTENT_CHECKSYSTEMNAME_ADMINWEB);
-    if (!dataCheck.recordset || !dataCheck.recordset[0].RESULT) {
-      return new ServiceResponse(false, RESPONSE_MSG.STATICCONTENT.EXISTS_SYSTEMNAME, null);
-    }
+    // const dataCheck = await pool.request()
+    //   .input('STATICCONTENTID', apiHelper.getValueFromObject(bodyParams, 'static_content_id'))
+    //   .input('SYSTEMNAME', apiHelper.getValueFromObject(bodyParams, 'system_name'))
+    //   .execute(PROCEDURE_NAME.CMS_STATICCONTENT_CHECKSYSTEMNAME_ADMINWEB);
+    // if (!dataCheck.recordset || !dataCheck.recordset[0].RESULT) {
+    //   return new ServiceResponse(false, RESPONSE_MSG.STATICCONTENT.EXISTS_SYSTEMNAME, null);
+    // }
 
     const data = await pool.request()
       .input('STATICCONTENTID', apiHelper.getValueFromObject(bodyParams, 'static_content_id'))

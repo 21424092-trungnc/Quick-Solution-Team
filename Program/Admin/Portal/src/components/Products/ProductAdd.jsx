@@ -74,7 +74,7 @@ export default class ProductAdd extends PureComponent {
 		this._manufacturerModel = new ManufacturerModel();
 		this._productModelModel = new ProductModelModel();
 		this._originModel = new OriginModel();
-		this._ptlevelModel = new PTLevelModel();
+		// this._ptlevelModel = new PTLevelModel();
 		this._productAttributeModel = new ProductAttributeModel();
 		this._unitModel = new UnitModel();
 		this._statusProductModel = new StatusProductModel();
@@ -115,10 +115,10 @@ export default class ProductAdd extends PureComponent {
 			origins: [
 				{ label: "-- Chọn --", value: "" }
 			],
-			/** @var {Array} */
-			ptlevels: [
-				{ label: "-- Chọn --", value: 0 }
-			],
+			// /** @var {Array} */
+			// ptlevels: [
+			// 	{ label: "-- Chọn --", value: 0 }
+			// ],
 			/** @var {Array} */
 			productAttributes: [
 				{ name: "Chọn thuộc tính", id: "" }
@@ -167,7 +167,7 @@ export default class ProductAdd extends PureComponent {
 		product_category_id: Yup.string()
 			.required("Danh mục sản phẩm là bắt buộc."),
 		businesses: Yup.array()
-			.required("Cơ sở phòng tập là bắt buộc."),
+			.required("Chi nhanh là bắt buộc."),
 		lot_number: Yup.string()
 			.max(120, "Số lô tối đa 120 ký tự."),
 		product_imei: Yup.string()
@@ -246,8 +246,8 @@ export default class ProductAdd extends PureComponent {
 			.then(data => (bundle['statusProducts'] = mapDataOptions4Select(data))),
 			this._originModel.getOptions({ is_active: 1 })
 				.then(data => (bundle['origins'] = mapDataOptions4Select(data))),
-			this._ptlevelModel.getOptions({ is_active: 1 })
-                .then(data => (bundle['ptlevels'] = mapDataOptions4Select(data))),
+			// this._ptlevelModel.getOptions({ is_active: 1 })
+            //     .then(data => (bundle['ptlevels'] = mapDataOptions4Select(data))),
 		];
 
         if(productEnt && productEnt.product_id){
@@ -656,7 +656,7 @@ export default class ProductAdd extends PureComponent {
 			productModels,
 			statusProducts,
 			origins,
-			ptlevels,
+			// ptlevels,
             productAttributes,
             units,
             proAttrValues,
@@ -824,7 +824,7 @@ export default class ProductAdd extends PureComponent {
 															<FormGroup>
 																<Row>
 																	<Label sm={4}>
-																		Cơ sở phòng tập<span className="font-weight-bold red-text">*</span>
+																		Chi nhanh<span className="font-weight-bold red-text">*</span>
 																	</Label>
 																	<Col sm={8}>
 																		<Row>
@@ -833,7 +833,7 @@ export default class ProductAdd extends PureComponent {
 																					<thead>
 																						<tr>
 																							<th style={{ width: '5%' }}>STT</th>
-																							<th style={{ minWidth: '150px' }}>Cơ sở phòng tập</th>
+																							<th style={{ minWidth: '150px' }}>Chi nhanh</th>
 																							{!noEdit && 
 																								<th style={{ width: '1%' }}>Xóa</th>
 																							}
@@ -890,7 +890,8 @@ export default class ProductAdd extends PureComponent {
 																			render={({ field/*, form*/ }) => {
 																				let defaultValue = productCategories.find(({ value }) => (1 * value) === (1 * field.value));
 																				let placeholder = (productCategories[0] && productCategories[0].label) || '';
-																				let groupedOptions = groupByParams(productCategories, 'parent_id')
+																				let groupedOptions = (productCategories.length > 1 && productCategories[0].id != '' && !!productCategories[0].parent_id) ? groupByParams(productCategories, 'parent_id') : productCategories
+																				//let groupedOptions = groupByParams(productCategories, 'parent_id')
 
 																				const Option = (props) => {
 																					const {
@@ -1329,14 +1330,14 @@ export default class ProductAdd extends PureComponent {
 																	</Col>
 																	<Col xs={12}>
 																		<FormGroup>
-																			<Row>
+																			{/* <Row>
 																				<Label sm={4}>
 																					Cấp độ PT
 																				</Label>
 																				<Col sm={8}>
 																					<Field
 																						name="pt_level_id"
-																						render={({ field/*, form*/ }) => {
+																						render={({ field}) => {
 																							let defaultValue = ptlevels.find(({ value }) => (1 * value) === (1 * field.value));
 																							let placeholder = (ptlevels[0] && ptlevels[0].label) || '';
 																							return (
@@ -1357,7 +1358,7 @@ export default class ProductAdd extends PureComponent {
 																					/>
 																					<ErrorMessage name="pt_level_id" component={({ children }) => <Alert color="danger" className="field-validation-error">{children}</Alert>} />
 																				</Col>
-																			</Row>
+																			</Row> */}
 																		</FormGroup>
 																	</Col>
 																	<Col xs={12}>

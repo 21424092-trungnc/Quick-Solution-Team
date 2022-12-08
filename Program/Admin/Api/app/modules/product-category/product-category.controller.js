@@ -1,5 +1,5 @@
 const productCategoryService = require('./product-category.service');
-// const taskWorkFollowService = require('../task-work-follow/task-work-follow.service');
+const taskWorkFollowService = require('../task-work-follow/task-work-follow.service');
 const SingleResponse = require('../../common/responses/single.response');
 const ListResponse = require('../../common/responses/list.response');
 const RESPONSE_MSG = require('../../common/const/responseMsg.const');

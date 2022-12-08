@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 
-import SunEditor from "suneditor-react";
-import plugins from 'suneditor/src/plugins';
-import 'suneditor/dist/css/suneditor.min.css';
+import SunEditor from 'suneditor-react';
+import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+
 
 /**
  * @class RichEditor
@@ -20,7 +20,7 @@ class RichEditor extends PureComponent {
       <SunEditor
         {...this.props}
         setOptions={{
-          plugins: plugins,
+          //plugins: plugins,
           buttonList: [
             ['undo', 'redo'],
             ['font', 'fontSize', 'formatBlock'],
