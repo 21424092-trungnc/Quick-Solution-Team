@@ -30,23 +30,27 @@
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/common.js"></script>
     @RenderSection("scripts", required: false)
-	
- <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124647617-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-124647617-1');
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N7BH2MV');</script>
-<!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124647617-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124647617-1');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N7BH2MV');</script>
+    <!-- End Google Tag Manager -->
 
 </head>
 <body>
@@ -60,12 +64,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     @Html.Action("Header", "Common")
     @RenderBody()
-    <section class="click-to-call">
-        <a href="tel:1900 888 699">
-            <img src="image/phone.gif" alt="Phone" />
-            <span>1900 888 699</span>
-        </a>
-    </section>
+    @*<section class="click-to-call">
+            <a href="tel:1900 888 699">
+                <img src="image/phone.gif" alt="Phone" />
+                <span>1900 888 699</span>
+            </a>
+        </section>*@
     <div class="partial-content" data-url="@Url.Action("Footer", "Common")"></div>
     @*@Scripts.Render("~/bundles/bootstrap")*@
     <script src="~/Scripts/bootstrap.js"></script>

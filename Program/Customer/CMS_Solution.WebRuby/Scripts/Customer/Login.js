@@ -19,48 +19,48 @@ Login.prototype = {
                 
             return false;
         });
-        $("#fb-login").unbind("click").click(function () {
-            FB.login(function (resLogin) {
-                console.log(resLogin);
-                if (resLogin.status === 'connected') {
-                    Common.Login.getUserInfoFB(resLogin.authResponse.accessToken);
-                } else {
-                    toastr.error(
-                           "Login facebook không thành công",
-                           "Thông báo",
-                           {
-                               timeOut: 2000,
-                               progressBar: true,
-                               closeButton: true
-                           }
-                       );
-                }
-            }, { scope: 'public_profile,email,user_gender' });
-            return false;
-        });
-        gapi.load('auth2', function () {
-            auth2 = gapi.auth2.init({
-                client_id: '133460432243-rmrjsl4vuiflk3k1uk58uqme4mttpvdd.apps.googleusercontent.com',
-                cookiepolicy: 'single_host_origin',
-            });
-            attachSignin(document.getElementById('gg-login'));
-        });
-        function attachSignin(element) {
-            auth2.attachClickHandler(element, {},
-                function (googleUser) {
-                    Common.Login.getUserInfoGG(googleUser);
-                }, function (error) {
-                    toastr.error(
-                          "Login google không thành công",
-                          "Thông báo",
-                          {
-                              timeOut: 2000,
-                              progressBar: true,
-                              closeButton: true
-                          }
-                      );
-                });
-        }
+        //$("#fb-login").unbind("click").click(function () {
+        //    FB.login(function (resLogin) {
+        //        console.log(resLogin);
+        //        if (resLogin.status === 'connected') {
+        //            Common.Login.getUserInfoFB(resLogin.authResponse.accessToken);
+        //        } else {
+        //            toastr.error(
+        //                   "Login facebook không thành công",
+        //                   "Thông báo",
+        //                   {
+        //                       timeOut: 2000,
+        //                       progressBar: true,
+        //                       closeButton: true
+        //                   }
+        //               );
+        //        }
+        //    }, { scope: 'public_profile,email,user_gender' });
+        //    return false;
+        //});
+        //gapi.load('auth2', function () {
+        //    auth2 = gapi.auth2.init({
+        //        client_id: '133460432243-rmrjsl4vuiflk3k1uk58uqme4mttpvdd.apps.googleusercontent.com',
+        //        cookiepolicy: 'single_host_origin',
+        //    });
+        //    attachSignin(document.getElementById('gg-login'));
+        //});
+        //function attachSignin(element) {
+        //    auth2.attachClickHandler(element, {},
+        //        function (googleUser) {
+        //            Common.Login.getUserInfoGG(googleUser);
+        //        }, function (error) {
+        //            toastr.error(
+        //                  "Login google không thành công",
+        //                  "Thông báo",
+        //                  {
+        //                      timeOut: 2000,
+        //                      progressBar: true,
+        //                      closeButton: true
+        //                  }
+        //              );
+        //        });
+        //}
     },
     getUserInfoFB: (accessToken) => {
         FB.api('/me', { fields: 'id,email,name,gender', access_token: accessToken }, function (response) {

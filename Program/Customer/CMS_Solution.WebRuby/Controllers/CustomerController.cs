@@ -398,7 +398,7 @@ namespace CMS_Solution.WebRuby.Controllers
                     using (_accountService = new AccountServiceClient())
                     {
                         var _isActive = _accountService.Account_Active(Encrypt_Decrypt.base64Decode(uID));
-                        if (_isActive != null && _isActive.Data.resultObject != null)
+                        if (_isActive != null && _isActive.Data.resultObject)
                         {
                             modelView.status = _isActive.Data.resultObject;
                         }

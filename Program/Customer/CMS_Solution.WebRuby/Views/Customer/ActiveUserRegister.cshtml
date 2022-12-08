@@ -7,21 +7,18 @@
     Html.AddTitleParts("Kích hoạt tài khoản");
 }
 <section class="main-checkout" style="padding-top: 115px !important; clear: both; padding-bottom: 0 !important">
-    <div class="bg-login">
-        <section class="container">
-            <section class="row">
-                <section class="col-md-12 text-center" style="padding-bottom: 50px">
-                    @if(Model.status == true)
-                    {
-                        <div><span style="color:green; font-weight:bold"> Bạn đã kích hoạt tài khoản thành công!!. Vui lòng </span><a href="/dang-nhap" class="btn-sign">Đăng nhập</a> <span style="color:green; font-weight:bold">tài khoản</span></div>
-                    }
-                    else
-                    {
-                        <div style="color: orangered; font-weight:bold">Kích hoạt tài khoản thất bại!!</div>
-                    }
-                </section>
+    <section class="container">
+        <section class="row">
+            <section class="col-md-12 text-center" style="padding-bottom: 50px">
+                @if (Model.status == true)
+                {
+                    <div><span style="color:green; font-weight:bold"> Bạn đã kích hoạt tài khoản thành công!!.<br /> Vui lòng </span><a href="/dang-nhap" class="btn-sign">Đăng nhập</a> <span style="color:green; font-weight:bold">tài khoản</span></div>
+                }
+                else
+                {
+                    <div style="color: orangered; font-weight:bold">Kích hoạt tài khoản thất bại!!</div>
+                }
             </section>
         </section>
-    </div>
-
+    </section>
 </section>

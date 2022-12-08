@@ -267,8 +267,8 @@ namespace CMS_Solution.WebRuby.Common
             try
             {
                 //result = temp.Data.resultObject;
-                var mailUsername = "devrubyfitness@gmail.com";
-                var mailPassword = "Des123456@";
+                var mailUsername = "chitrung0895@gmail.com";
+                var mailPassword = "amxytccmkjdekszs";
                 var mailhost = "smtp.gmail.com";
                 var mailport = 587;
                 var basicCredential = new NetworkCredential(mailUsername.Split('@')[0], mailPassword);

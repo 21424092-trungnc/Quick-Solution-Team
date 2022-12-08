@@ -3045,7 +3045,7 @@ a.btn-sign {
                 display: none;
             }
 
-    .click-to-call {
+   /* .click-to-call {
         bottom: 70px;
         left: 5px
     }
@@ -3060,7 +3060,7 @@ a.btn-sign {
 
     .click-to-call img {
         margin-right: 0;
-    }
+    }*/
 }
 
 @media screen and (max-width:480px) {
@@ -3507,7 +3507,7 @@ li.sub:after {
     margin-top: 40px;
     padding: 0;
   }
-  .click-to-call{
+  /*.click-to-call{
     position: fixed;
     bottom: 40px;
     left: 30px;
@@ -3531,7 +3531,7 @@ li.sub:after {
     margin-right: 15px;
     position: relative;
     top: -2px
-  }
+  }*/
 /*Thent8*/
 #modalPromotion .modal-content {
     background-color: #FFF !important

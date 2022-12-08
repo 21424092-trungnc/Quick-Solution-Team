@@ -18,12 +18,12 @@
     <section class="container">
         <section class="row">
             <section class="col-lg-6 col-md-6">
-                <p><i class="fas fa-envelope"></i> Email: <u>cskh@rubyfitness.vn</u> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-phone-alt"></i> 1900 888 699</p>
+                <p><i class="fas fa-envelope"></i> Email: <u>cskh@quickteamsolution.vn</u> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-phone-alt"></i> 0352366360</p>
             </section>
             <section class="col-lg-6 col-md-6 text-right">
                 <p>
 
-                    @if (user.MemberID == null || user.MemberID == 0)
+                    @if (user == null || user.MemberID == 0)
                     {
                         <a href="/dang-nhap">Đăng nhập</a> <span class="p-1"> | </span> <a href="/dang-ky">Đăng ký</a>
                     }
@@ -35,7 +35,7 @@
 
 
 <header>
-    <section class="container">
+    <section class="container mt-3">
         <section class="row">
             <section class="col-lg-9 col-md-8 col-sm-12 fl fl-center p-inhert">
                 @Html.Partial("Logo")

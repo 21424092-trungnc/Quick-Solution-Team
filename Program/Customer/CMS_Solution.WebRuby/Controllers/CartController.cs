@@ -32,7 +32,7 @@ namespace CMS_Solution.WebRuby.Controllers
                 var search = new CartParam();
                 search.PageIndex = 1;
                 search.PageSize = 10;
-                search.CookieId = !string.IsNullOrEmpty(Request.Cookies["orderCart"].Value) ? Request.Cookies["orderCart"].Value : string.Empty;
+                search.CookieId = (Request.Cookies["orderCart"] != null && Request.Cookies["orderCart"].Value != null && !string.IsNullOrEmpty(Request.Cookies["orderCart"].Value)) ? Request.Cookies["orderCart"].Value : string.Empty;
                 search.MemberId = 0;
                 using (_cartService = new CartServiceClient())
                 {
