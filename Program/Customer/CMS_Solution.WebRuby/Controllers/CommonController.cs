@@ -326,21 +326,21 @@ namespace CMS_Solution.WebRuby.Controllers
                     {
                         viewModel.staticContentMap = staticContent.Data.resultObject;
                     }
-                    var partnerContent = _dungChungService.CMS_StaticContent_Get("Partner");
-                    if (partnerContent.Data != null && partnerContent.Data.resultObject != null)
-                    {
-                        viewModel.partnerContentMap = partnerContent.Data.resultObject;
-                    }
-                    var lstUser = _dungChungService.SYS_User_GetList("Ban giám đốc");
-                    if (lstUser.Data != null && lstUser.Data.resultObject != null && lstUser.Data.resultObject.Count > 0)
-                    {
-                        viewModel.lstUserMap = lstUser.Data.resultObject;
-                    }
-                    var branch = _dungChungService.CMS_StaticContent_Get("Branch");
-                    if (branch.Data != null && branch.Data.resultObject != null)
-                    {
-                        viewModel.branchMap = branch.Data.resultObject;
-                    }
+                    //var partnerContent = _dungChungService.CMS_StaticContent_Get("Partner");
+                    //if (partnerContent.Data != null && partnerContent.Data.resultObject != null)
+                    //{
+                    //    viewModel.partnerContentMap = partnerContent.Data.resultObject;
+                    //}
+                    //var lstUser = _dungChungService.SYS_User_GetList("Ban giám đốc");
+                    //if (lstUser.Data != null && lstUser.Data.resultObject != null && lstUser.Data.resultObject.Count > 0)
+                    //{
+                    //    viewModel.lstUserMap = lstUser.Data.resultObject;
+                    //}
+                    //var branch = _dungChungService.CMS_StaticContent_Get("Branch");
+                    //if (branch.Data != null && branch.Data.resultObject != null)
+                    //{
+                    //    viewModel.branchMap = branch.Data.resultObject;
+                    //}
                 }
             }
             catch (Exception ex)

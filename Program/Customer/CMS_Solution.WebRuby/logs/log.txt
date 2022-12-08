@@ -1,280 +1,336 @@
-ERROR 2022-10-21 15:50:35,690 1454782ms BaseController         AboutHome          - About error: Value cannot be null.
+ERROR 2022-12-08 19:10:05,500 789130ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 148--
+ERROR 2022-12-08 19:10:48,909 832539ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 459--
+ERROR 2022-12-08 19:10:50,105 833736ms BaseController         Footer             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Footer() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 148--
+ERROR 2022-12-08 19:16:22,953 1166584ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:18:18,920 1282551ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:19:27,628 1351258ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:23:35,257 1598888ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:23:35,978 1599609ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:23:54,326 15390ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:23:55,534 16598ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:24:10,721 31784ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:24:10,926 31990ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:24:12,988 34052ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:24:13,183 34247ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:24:19,898 40962ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:24:20,284 41348ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:24:40,277 61341ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:24:40,418 61482ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:26:32,386 173450ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:26:32,525 173589ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:26:36,402 177466ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:26:36,548 177612ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:26:38,670 179733ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 19:26:38,820 179884ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:26:42,153 183217ms BaseController         Header             - CommonController error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:26:43,063 184127ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:51:17,457 1496549ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:27:02,328 203391ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:51:18,723 1497815ms BaseController         AboutHome          - About error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:51:20,906 1499998ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:51:22,550 1501642ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:27:03,839 204902ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:51:24,924 1504017ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:27:13,095 214159ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:51:26,497 1505590ms BaseController         AboutHome          - About error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:51:58,321  6779ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:52:01,123  9580ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:27:55,181 256245ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:53:00,825 69282ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:27:59,646 260710ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:53:02,646 71103ms BaseController         AboutHome          - About error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 15:57:08,982 317440ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:57:14,197 322655ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 15:57:20,005 328462ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:00:57,428 545885ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:01:03,484 551941ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:01:21,686 570143ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:01:29,914 578371ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:28:09,628 270692ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:06:13,722 862180ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:28:24,607  3291ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:06:19,332 867789ms BaseController         AboutHome          - About error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:06:42,737 891194ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:07:20,502 928960ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:08:52,755 1021212ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:10:00,038 1088495ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:12:55,407 1263864ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:28:25,733  4417ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:12:55,806 1264263ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:28:28,570  7254ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:12:57,955 1266413ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:32:59,582 278266ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:17:35,814 1544272ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:33:03,321 282004ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:17:36,251 1544708ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:33:10,109 288793ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:17:38,355 1546812ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:34:34,433 373117ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:17:46,880 1555338ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:34:50,567  2805ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:17:53,132 1561589ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:36:11,403  2397ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:18:14,396 1582853ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:39:25,861  3650ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:19:22,121 1650578ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:42:34,109 191898ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:19:24,321 1652778ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:43:46,969 264758ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:33:33,015 2501472ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:45:56,559 394348ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:33:55,495 2523952ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:46:13,663  2668ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:34:30,304 2558761ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:49:39,201  2500ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:34:43,985 2572443ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:50:55,276 78574ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:34:46,343 2574801ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:51:54,500 137798ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:49:01,805 3430262ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:52:33,742 177041ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:49:03,161 3431619ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:53:02,860 206159ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:49:47,256 3475713ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:53:23,427  2397ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:49:55,323 3483780ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:53:30,251  9222ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:50:56,211 3544668ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:51:38,770 3587228ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:51:39,393 3587850ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:51:48,444 3596902ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:52:08,831 3617288ms BaseController         Header             - CommonController error: Value cannot be null.
-Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
-   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
-   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 16:52:10,867 3619324ms BaseController         AboutHome          - About error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:53:31,642 10612ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
    at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
-ERROR 2022-10-21 16:52:16,838 3625296ms BaseController         Header             - CommonController error: Value cannot be null.
+ERROR 2022-12-08 19:53:47,643 26613ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 17:15:03,673  5425ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:54:22,672  2219ms BaseController         Header             - CommonController error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 17:17:18,689 140441ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 483--
+ERROR 2022-12-08 19:57:09,805 169352ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 17:17:39,409  4687ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:01:03,638 403185ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 17:19:05,384 90662ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:01:18,658 418206ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
-ERROR 2022-10-21 17:19:23,086 108364ms BaseController         Header             - CommonController error: Value cannot be null.
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:02:45,677 505224ms BaseController         AboutHome          - About error: Value cannot be null.
 Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
    at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
    at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
-   at CMS_Solution.WebRuby.Controllers.CommonController.Header() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 508--
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:03:26,733 546280ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:03:47,042  4165ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:04:18,261 35384ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:04:41,306 58428ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:05:05,614  3375ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:08:26,018 203779ms CatalogController      Category           - CatalogController Category error: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index--   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at CMS_Solution.WebRuby.Controllers.CatalogController.Category(Int64 categoryid, String[] p, String[] s, ProductPagingFilteringModel command) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CatalogController.cs:line 184--
+ERROR 2022-12-08 20:11:29,793 387554ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:12:10,334 428095ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--
+ERROR 2022-12-08 20:12:32,501 450262ms BaseController         AboutHome          - About error: Value cannot be null.
+Parameter name: value--   at System.Runtime.Caching.MemoryCacheEntry..ctor(String key, Object value, DateTimeOffset absExp, TimeSpan slidingExp, CacheItemPriority priority, Collection`1 dependencies, CacheEntryRemovedCallback removedCallback, MemoryCache cache)
+   at System.Runtime.Caching.MemoryCache.Set(String key, Object value, CacheItemPolicy policy, String regionName)
+   at Core.Common.Utilities.CacheHelper.SetData(String cacheKey, Object data, Double expireMinutes) in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\BACKEND\Core\Core.Common\Utilities\CacheHelper.cs:line 40
+   at CMS_Solution.WebRuby.Controllers.CommonController.AboutHome() in D:\_NCTroject\GIT\Quick-Solution-Team\Program\Customer\CMS_Solution.WebRuby\Controllers\CommonController.cs:line 63--

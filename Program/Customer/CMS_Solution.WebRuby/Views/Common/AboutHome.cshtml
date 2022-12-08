@@ -1,23 +1,10 @@
 ﻿@model CMS_Solution.WebRuby.ViewModel.AboutHomeViewModel
-
-@*<section class="about-home">
-        <section class="row">
-            @if (Model.staticContentMap != null)
-            {
-                @Html.Raw((Model.staticContentMap != null ? (Model.staticContentMap.StaticContent.Replace("&amp;", "&")
-                                                 .Replace("&lt;", "<")
-                                                 .Replace("&gt;", ">")
-                                                 .Replace("&quot;", "\"")
-                                                 .Replace("&#039;", "\'") ?? "") : ""))
-            }
-        </section>
-    </section>*@
 <section class="cate-home">
     <section class="container">
         <h2 class="title-page">Dòng sản phẩm</h2>
         <section class="box-cate-product">
             <a href="/san-pham" class="cate-product">
-               <img src="~/image/apple.png" alt="apple" />
+                <img src="~/image/apple.png" alt="apple" />
                 <h2>Apple</h2>
                 <p>Thương hiệu của Apple nổi tiếng của Mỹ, với cấu hình mạnh mẽ, thiết kế thời trang, màn hình Retina độc quyền, hệ thống camera cực nét,... </p>
             </a>
