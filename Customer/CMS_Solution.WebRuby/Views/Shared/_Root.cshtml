@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.Head.cshtml";
+}
+@*@Html.Action("Header", "Common")*@
+@if (IsSectionDefined("Breadcrumb"))
+{
+    @RenderSection("Breadcrumb")
+}
+@RenderBody()
+@*@Html.Action("Footer", "Common")*@
+
+<script>
+    var urlAjaxAttributes = '@Url.Action("FilterAttributeProductSearch", "Catalog")';
+</script>

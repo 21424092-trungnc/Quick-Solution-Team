@@ -1,0 +1,35 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model  CMS_Solution.WebRuby.ViewModel.RecruitmentViewModel
+
+@if (Model.Items != null && Model.Items.Any())
+{
+    <h2>@Model.Items.Count vị trí đang tuyển dụng</h2>
+    foreach (var item in Model.Items)
+    {
+        <section class="recruit">
+            <h3><a href="@Url.RouteUrl("RecruitmentItem", new { SeName =  item.SeoName.ToLower() })">@item.RecruitmentTitle</a></h3>
+            <ul class="rec">
+                <li>@item.BusinessName </li>
+                <li>@item.SalaryFrom - @item.SalaryTo</li>
+                <li>@item.StartDate - @item.EndDate</li>
+            </ul>
+            <a href="@Url.RouteUrl("RecruitmentItem", new { SeName = item.SeoName.ToLower() })" class="views">Chi tiết</a>
+        </section>
+    }
+}
+else
+{
+    <div>Tin tuyển dụng đang cập nhật</div>
+}
+@if (Model != null && Model.Items != null && Model.Items.Any())
+{
+    var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
+    if (!pager.IsEmpty())
+    {
+        <div class="pager mt-0 pt-0 mb-3">
+            @pager
+        </div>
+    }
+}

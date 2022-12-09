@@ -1,0 +1,86 @@
+﻿@model Business.Entities.Domain.ProductDetailAll
+<h2 class="title-about">Bình luận (@Model.Comments.Count)</h2>
+@if (Model.Comments != null && Model.Comments.Any())
+{
+    var listComment = Model.Comments.Where(x => x.CommentReplyId == 0).OrderBy(m => m.ProductCommentId);
+    foreach (var keyComment in listComment)
+    {
+        var avatar = !string.IsNullOrEmpty(keyComment.ImageAvatar) ? keyComment.ImageAvatar : "/Content/image/avatar.png";
+<section class="comment">
+    <section class="avatar">
+        <img src="@avatar" alt="Avatar">
+    </section>
+    <section class="main-comment">
+        <h3>
+            <a href="javascipt:void(0)">@(!string.IsNullOrEmpty(keyComment.FullName) ? keyComment.FullName : keyComment.UserComment)</a>
+            @if (keyComment.RattingValues > 0)
+            {
+                <span> - </span> <span>
+                    @for (int i = 0; i < keyComment.RattingValues; i++)
+                    {
+                        <i class="material-icons">star</i>
+                    }
+                </span>
+            }
+
+        </h3>
+        <p>@keyComment.ContentComment</p>
+        <ul>
+            <li><a name="replyComment" class="pointer" id="commnent_@keyComment.ProductCommentId" onclick="Common.ProductComments.Reply(this,@keyComment.ProductCommentId,@keyComment.ProductId)"><img src="~/Content/image/icon-comment.png" alt="comment"/> Trả lời</a></li>
+        </ul>
+    </section>
+   
+</section>
+        var listReply = Model.Comments.Where(x => x.CommentReplyId == keyComment.ProductCommentId).OrderBy(m => m.ProductCommentId);
+        foreach (var child in listReply)
+        {
+            var avatarChild = !string.IsNullOrEmpty(child.ImageAvatar) ? child.ImageAvatar : "/Content/image/avatar.png";
+            <section class="comment child">
+                <section class="avatar">
+                    <img src="@avatarChild" alt="Avatar">
+                </section>
+                <section class="main-comment">
+                    <h3><a href="javascipt:void(0)">@(!string.IsNullOrEmpty(child.FullName) ? child.FullName : child.UserComment)</a></h3>
+                    <p>@child.ContentComment</p>
+                    @*<ul>
+                        <li><a href="#"><img src="~/Content/image/icon-comment.png" alt="comment" /> Trả lời</a></li>
+                    </ul>*@
+                </section> 
+            </section>
+        }
+
+    }
+}
+
+
+@*<section class="review">
+    <h2 class="title-about">Bình luận (1)</h2>
+    <section class="comment">
+        <section class="avatar">
+            <img src="/Content/image/avatar.png" alt="Avatar">
+        </section>
+        <section class="main-comment">
+            <h3><a href="#">Mai Thị Mai Anh</a> <span>★★★★★</span></h3>
+            <p>Máy chạy rất ổn định, Quick Solution Team giao hàng rất nhanh và chu đáo</p>
+            <a class="reply-btn"><img src="/Content/image/icon-comment.png" alt="comment" /> Trả lời</a>
+        </section> 
+        <section class="comment child">
+            <section class="avatar">
+                <img src="/Content/image/avatar.png" alt="Avatar">
+            </section>
+            <section class="main-comment">
+                <h3><a href="#">Quản trị viên</a></h3>
+                <p>Ruby Cảm ơn bạn, chúc bạn ngày mới vui vẻ, và thành công.</p>
+            </section>
+        </section>
+        <section class="comment child">
+            <section class="avatar">
+                <img src="/Content/image/avatar.png" alt="Avatar">
+            </section>
+            <section class="main-comment">
+                <h3><a href="#">Mai</a></h3>
+                <p>Yeah.</p>
+            </section>
+        </section>
+    </section>
+</section>*@

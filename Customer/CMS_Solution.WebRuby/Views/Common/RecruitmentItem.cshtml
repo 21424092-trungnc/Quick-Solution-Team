@@ -1,0 +1,61 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model  CMS_Solution.WebRuby.ViewModel.RecruitmentDetailViewModel
+@{
+    var detail = (Model != null && Model.Detail != null) ? Model.Detail : new Business.Entities.RecruitmentDetail();
+    var candidate = (Model != null && Model.Candidate != null) ? Model.Candidate : new Business.Entities.CandidateMapAdd();
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Html.AddTitleParts(detail.RecruitmentTitle);
+}
+@section Breadcrumb
+{
+    <section class="background-about mt-2">
+        <section class="bg-about">
+            <h1>Tuyển dụng</h1>
+        </section>
+    </section>
+    <section class="container mg-crumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.RouteUrl("HomePage")">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="@Url.RouteUrl("Recruitment")">Tuyển dụng</a></li>
+            <li class="breadcrumb-item active">@(detail.RecruitmentTitle)</li>
+        </ul>
+    </section>
+}
+
+<section class="news-home recruitment">
+    <section class="container">
+        <section class="row justify-content-center">
+            <section class="col-md-10 col-sm-12">
+                <h1 class="title-about">@(detail.RecruitmentTitle)</h1>
+                <ul class="rec">
+                    <li>@(detail.BusinessName) </li>
+                    <li>@(detail.SalaryFrom) - @(detail.SalaryTo)</li>
+                    <li>@(detail.StartDate) - @(detail.EndDate)</li>
+                </ul>
+                @*<section class="support">
+                    <ul>
+                        <li>Bảo hiểm theo quy định</li>
+                        <li>Du Lịch</li>
+                        <li>Đồng phục</li>
+                        <li>Thưởng</li>
+                        <li>Chăm sóc sức khỏe</li>
+                        <li>Đào tạo</li>
+                        <li>Tăng lương</li>
+                        <li>Công tác phí</li>
+                        <li>Chế độ nghỉ phép</li>
+                    </ul>
+                </section>*@
+                <section class="content-requitment">
+                    @Html.Raw(HttpUtility.HtmlDecode(detail.RecruitContent ?? ""))
+                    <p><b><i>* Chú ý: Ứng viên gửi CV vào địa chỉ email tuyendung@rubyfitness.vn hoặc qua form sau:</i></b></p>
+                </section>
+                <section class="form-apply">
+                    <h3>Ứng tuyển</h3>
+                    @Html.Partial("Partial/CandidateApply", Model.Candidate)
+                </section>
+            </section>
+        </section>
+    </section>
+</section>

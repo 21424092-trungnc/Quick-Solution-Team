@@ -1,7 +1,0 @@
-﻿@using CMS_Solution.WebRuby.Common
-@model  Business.Entities.RecruitmentParam
-<form role="form" id="form-SearchRecruitment" class="form">
-    @Html.DropDownListFor(m => m.BusinessId, CommonWebsite.GetCBODungChung(new Business.Entities.CBO_DungChungParam { TableName = "AM_BUSINESS", ParentID = "" }), "Chi nhánh")
-    @Html.DropDownListFor(m => m.PositionId, CommonWebsite.GetCBODungChung(new Business.Entities.CBO_DungChungParam { TableName = "MD_POSITION", ParentID = "" }), "Vị trí")
-    <button type="button" id="btnFormSearch">Áp dụng</button>
-</form>

@@ -1,0 +1,18 @@
+﻿@{
+    //add browser specific CSS files
+    var browser = Request.Browser;
+    var isIeEightOrLess = false;
+    if (browser.Browser == "IE" && browser.MajorVersion <= 8)
+    {
+        isIeEightOrLess = true;
+    }
+    //add main CSS file
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/icon.min.css" rel="stylesheet" />
+    <link href="~/Content/css.min.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    if (isIeEightOrLess)
+    {
+        @Scripts.Render("~/bundles/modernizr")
+    }
+}

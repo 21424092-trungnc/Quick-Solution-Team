@@ -1,0 +1,97 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model Business.Entities.CandidateMapAdd
+
+<form role="form" id="form-CandidateApply" class="form-apply">
+    @Html.HiddenFor(model => model.RecruitId)
+    @Html.HiddenFor(model => model.AttachmentPath)
+    @Html.HiddenFor(model => model.AttachmentName)
+    <section>
+        <label for="name">Họ tên ứng viên <span>*</span></label>
+        @Html.TextBoxFor(model => model.CandidateFullName, new
+   {
+       @class = "",
+       @placeholder = "",
+       @data_rule_required = "true",
+       @data_msg_required = "Vui lòng nhập họ tên ứng viên!!!",
+       @maxlength = 250
+   })
+    </section>
+    <section>
+        <label for="sex">Giới tính <span>*</span></label>
+        <label class="mg-0 active">
+            <input type="radio" id="sex" class="check" checked="" name="Gender" value="0">
+            <span class="check-in"></span>
+            Nam
+        </label>
+        <label class="mg-0">
+            <input type="radio" class="check" name="Gender" value="1">
+            <span class="check-in"></span>
+            Nữ
+        </label>
+    </section>
+    <section>
+        <label for="email">Email <span>*</span></label>
+        @Html.TextBoxFor(model => model.Email, new
+   {
+       @class = "",
+       @placeholder = "",
+       @data_rule_required = "true",
+       @data_msg_required = "Vui lòng nhập email ứng viên!!!",
+       @data_rule_email = "true",
+       @data_msg_email = "Vui lòng nhập email đúng định dạng!!!",
+       @maxlength = 250
+   })
+    </section>
+    <section>
+        <label for="phone">Số điện thoại <span>*</span></label>
+        @Html.TextBoxFor(model => model.PhoneNumber, new
+   {
+       @value="",
+       @class = "",
+       @placeholder = "",
+       @data_rule_required = "true",
+       @data_msg_required = "Vui lòng nhập số điện thoại ứng viên!!!",
+       @maxlength = 11,
+       @data_rule_phone = "true",
+       @data_rule_min_length = "10",
+       @data_msg_min_length = "Số điện thoại phải có ít nhất 10 số"
+   })
+    </section>
+    <section>
+        <label for="content">Giới thiệu bản thân <span>*</span></label>
+        @Html.TextAreaFor(model => model.Introduction, new
+                           {
+                               @class = "",
+                               @placeholder = "",
+                               @data_rule_required = "true",
+                               @data_msg_required = "Vui lòng nhập giới thiệu ứng viên!!!",
+                               @maxlength = 250
+                           })
+    </section>
+    <section>
+        <label for="cv">CV hoặc thư giới thiệu <span>*</span></label>
+        <input type="file" id="fileCV" name="fileCV" onchange="Common.CandidateApply.UploadFile();" data-msg-required="Vui lòng đính kèm CV ứng viên!!!" data-rule-required="true">
+    </section>
+    <p class="note-form">* Trường bắt buộc nhập</p>
+    <button type="button" id="btnSave">Ứng tuyển</button>
+</form>
+@{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Recruitment/CandidateApply.min.js")"></script>
+}
+<script>
+    $(document).ready(function () {
+        if (Common.Empty(Common.CandidateApply)) {
+            Common.CandidateApply = new CandidateApply({
+                Url: {
+                    Apply: '@Url.Action("Apply", "Common")',
+                    UploadFile: '@Url.Action("UploadFile", "Common")',
+                },
+            });
+        }
+        else {
+            Common.CandidateApply.RegisterEvent();
+        }
+    });
+</script>

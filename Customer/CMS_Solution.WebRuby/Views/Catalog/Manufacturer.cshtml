@@ -1,0 +1,81 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model CMS_Solution.WebRuby.ViewModel.ProductMapViewModel
+@{
+    var _detail = (Model.SeoSetting != null) ? Model.SeoSetting : new Business.Entities.SeoSettings();
+    Layout = "~/Views/Shared/_ColumnsTwoProduct.cshtml";
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle);
+    //meta
+    Html.AddMetaDescriptionParts(_detail.MetaDescriptions);
+    Html.AddMetaKeywordParts(_detail.MetaKeywords);
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescriptions) ? _detail.MetaDescriptions : _detail.NameTitle)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"fb:app_id\" content='259844368091705' />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image:width\" content=\"480\"/>");
+    Html.AddHeadCustomParts("<meta property=\"og:image:height\" content='360'/>");
+    Html.AddHeadCustomParts("<meta name='msapplication-config' content='browserconfig.xml'/>");
+    //Twitter META tags
+    Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescriptions) ? _detail.MetaDescriptions : _detail.NameTitle)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+}
+@section Breadcrumb
+{
+    <section class="background-about mt-2">
+        <section class="bg-about">
+            <h1>Sản phẩm @_detail.NameTitle</h1>
+        </section>
+    </section>
+    <section class="container mg-crumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="/" title="Trang chủ" itemprop="url"><span itemprop="title">Trang chủ</span></a>
+            </li>
+            <li class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="@Url.RouteUrl("ProductCate")" title="Tin tức" itemprop="url">
+                    <span itemprop="title">Sản phẩm</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">@_detail.NameTitle</li>
+        </ul>
+    </section>
+}
+@if (Model != null && Model.Product != null && Model.Product.Any())
+{
+    <section class="row index_col_products" data-id="@Model.SeoSetting.ID" data-groupid="@Model.SeoSetting.GroupID" data-urlfau="@Url.Action("Category", "Catalog")" data-url="@Url.Action("FilterAttributeProductSearch", "Catalog", new { id = Model.SeoSetting.ID, GroupId = Model.SeoSetting.GroupID })">
+        @if (Model != null && Model.Product != null && Model.Product.Any())
+        {
+            foreach (var item in Model.Product)
+            {
+                <section class="col-lg-4 col-md-4 col-sm-6 col-m-5">
+                    @Html.Partial("_ProductBox", item)
+                </section>
+            }
+            var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
+            if (!pager.IsEmpty())
+            {
+                <section class="col-lg-12 col-md-12 col-sm-12 col-m-12">
+                    <div class="pager mt-0 pt-0 mb-3 filter-search-pager">
+                        @pager
+                    </div>
+                </section>
+            }
+        }
+        else
+        {
+            <div><h4>Không tìm thấy sản phẩm</h4></div>
+        }
+    </section>
+}

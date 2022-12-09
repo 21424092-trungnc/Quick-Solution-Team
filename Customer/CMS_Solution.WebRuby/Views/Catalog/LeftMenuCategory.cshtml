@@ -1,0 +1,23 @@
+﻿@model List<Business.Entities.Domain.ProductCategoryMap>
+@if (Model != null && Model.Any())
+{
+    var categoryid = ViewData["categoryid"] as long?;
+<section class="cate">
+    <h3>Danh mục</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li><a href="@Url.RouteUrl("Category", new { SeName = item.SeoName.ToLower()})" title="@item.NameShowWeb" >
+                 @if (categoryid.HasValue && categoryid.Value == item.ProductCategoryId)
+                 {
+                    @Html.Raw("<b>" + item.NameShowWeb + "(" + item.CountProduct + ")</b>")
+                 }
+                 else
+                 {
+                     @Html.Raw(item.NameShowWeb + "("+ item.CountProduct+")")
+                 }
+                </a></li>
+        }
+    </ul>
+</section>
+}

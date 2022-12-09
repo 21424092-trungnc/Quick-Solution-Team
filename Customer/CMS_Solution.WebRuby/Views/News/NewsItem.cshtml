@@ -1,0 +1,96 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@model  CMS_Solution.WebRuby.ViewModel.NewsDetailViewModel
+@{
+    var _detail = Model.NewsDetail;
+    var _newsSame = (Model.ListSameCategory != null) ? Model.ListSameCategory : null;
+
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NewsTitle);
+    //meta
+    Html.AddMetaDescriptionParts(Model.NewsDetail.MetaDescription);
+    Html.AddMetaKeywordParts(Model.NewsDetail.MetaKeyWords);
+    //page class
+    Html.AppendPageCssClassParts("html-news-list-page");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NewsTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescription) ? _detail.MetaDescription : _detail.ShortDescription)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"fb:app_id\" content='259844368091705' />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image:width\" content=\"480\"/>");
+    Html.AddHeadCustomParts("<meta property=\"og:image:height\" content='360'/>");
+    Html.AddHeadCustomParts("<meta name='msapplication-config' content='browserconfig.xml'/>");
+    //Twitter META tags
+    Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NewsTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescription) ? _detail.MetaDescription : _detail.ShortDescription)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+}
+@section Breadcrumb
+{
+    <section class="background-about mt-2">
+        <section class="bg-about">
+            <h1>Tin tức</h1>
+        </section>
+    </section>
+    <section class="container mg-crumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" title="Trang chủ">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Tin tức</a></li>
+            <li class="breadcrumb-item active">@_detail.NewsTitle</li>
+        </ul>
+    </section>
+}
+
+<section class="news-home">
+    <section class="container">
+        <section class="row justify-content-center">
+            <section class="col-md-10 col-sm-12">
+                <h1 class="title-about">@_detail.NewsTitle</h1>
+                <p class="__update">@_detail.NewsDate</p>
+                <section class="shortdes">
+                    <p>@_detail.ShortDescription</p>
+                </section>
+            </section>
+        </section>
+        <section class="content-news">
+            <div>
+                @Html.Raw(!string.IsNullOrEmpty(_detail.Content) ? _detail.Content.Replace("&amp;", "&")
+                                                 .Replace("&lt;", "<")
+                                                 .Replace("&gt;", ">")
+                                                 .Replace("&quot;", "\"")
+                                                 .Replace("&#039;", "\'") : "&nbsp;")
+                </div>
+</section>
+        @if (_newsSame != null)
+        {
+            <section class="more-news">
+                <h2 class="title-about">Bài viết liên quan</h2>
+                <section class="row">
+                    @foreach (var news in _newsSame)
+                    {
+                        <section class="col-lg-4 col-md-4 col-sm-12">
+                            <section class="news">
+                                <a href="@Url.RouteUrl("NewsItem", new { SeName = news.SeoName.ToLower()})" title="@news.NewsTitle">
+                                    <img class="hot-news" src="@CommonWebsite.UrlWebsite@news.ImageUrl" alt="@news.NewsTitle">
+                                </a>
+                                <p class="__update">@news.NewsDate</p>
+                                <h3><a href="@Url.RouteUrl("NewsItem", new { SeName = news.SeoName.ToLower()})">@news.NewsTitle</a></h3>
+                                <p>@news.ShortDescription</p>
+                            </section>
+                        </section>
+                    }
+                </section>
+            </section>
+        }
+
+    </section>
+</section>

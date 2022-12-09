@@ -1,0 +1,26 @@
+﻿@using CMS_Solution.WebRuby.Common;
+@using System.Web.Script.Serialization;
+@model List<Business.Entities.Domain.BannerMap>
+<section class="video-background mt-2" id="sliderSection">
+</section>
+<style>
+    .nivo-main-image {
+        width: 100% !important
+    }
+</style>
+<script type="text/javascript">
+    var div = document.createElement('div')
+    div.classList.add('slider');
+    var count = @(Model != null && Model.Any()?Model.Count:0);
+    var myArray = JSON.parse('@Html.Raw(new JavaScriptSerializer().Serialize(Model).Replace("&lt;", "<")
+                      .Replace("&gt;", ">")
+                      .Replace("&quot;", "\"")
+                      .Replace("&#039;", "\'").Replace("\\", "/"))');
+    for (var i = 0; i < count; i++) {
+        $(div).append('<img alt="' + myArray[i].PictureAlias + '" src="@(CommonWebsite.UrlWebsite)' + myArray[i].PictureUrl + '" />');
+    }
+    $('#sliderSection').append($(div));
+    //$('.slider').nivoSlider({
+    //controlNav: false,
+//});
+</script>

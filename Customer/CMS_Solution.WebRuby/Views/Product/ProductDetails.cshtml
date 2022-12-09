@@ -1,0 +1,347 @@
+﻿@using Core.Common.UI;
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+@model CMS_Solution.WebRuby.ViewModel.ProductDetailAllViewModel
+@{
+    var _detail = (Model.SeoSetting != null) ? Model.SeoSetting : new Business.Entities.SeoSettings();
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    //title
+    Html.AddTitleParts(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle);
+    //meta
+    Html.AddMetaDescriptionParts(_detail.MetaDescriptions);
+    Html.AddMetaKeywordParts(_detail.MetaKeywords);
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescriptions) ? _detail.MetaDescriptions : Model.ProductDetail.Product.ProductNameShowWeb)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    //open graph META tags
+    Html.AddHeadCustomParts("<meta property=\"fb:app_id\" content='259844368091705' />");
+    Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"og:image:width\" content=\"480\"/>");
+    Html.AddHeadCustomParts("<meta property=\"og:image:height\" content='360'/>");
+    Html.AddHeadCustomParts("<meta name='msapplication-config' content='browserconfig.xml'/>");
+    //Twitter META tags
+    Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(Request.Url.Host) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(!String.IsNullOrEmpty(_detail.MetaTitle) ? _detail.MetaTitle : _detail.NameTitle) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Core.Common.Html.HtmlHelper.StripTags(!String.IsNullOrEmpty(_detail.MetaDescriptions) ? _detail.MetaDescriptions : Model.ProductDetail.Product.ProductNameShowWeb)) + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + _detail.ImageUrl + "\" />");
+    Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+}
+@section Breadcrumb
+{
+    <section class="background-about mt-2">
+        <section class="bg-about">
+            <h1>@*Sản phẩm*@</h1>
+        </section>
+    </section>
+    <section class="container mg-crumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="/" title="Trang chủ" itemprop="url"><span itemprop="title">Trang chủ</span></a>
+            </li>
+            <li class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="@Url.RouteUrl("ProductCate")" title="san phẩm" itemprop="url">
+                    <span itemprop="title">Sản phẩm</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">@(_detail.NameTitle ?? Model.ProductDetail.Product.ProductNameShowWeb)</li>
+        </ul>
+    </section>
+}
+@if (Model != null && Model.ProductDetail != null && Model.ProductDetail.Product != null)
+{
+    <section class="top-product">
+        <section class="container">
+            <section class="row">
+                <section class="col-md-6 col-sm-12 rel img-detail">
+                    @if (Model.ProductDetail.Pictures != null && Model.ProductDetail.Pictures.Any())
+                    {
+                        <div class="fotorama" data-nav="thumbs" data-transition="crossfade" data-autoplay="3000">
+                            @foreach (var item in Model.ProductDetail.Pictures)
+                            {
+                                <a href='@CommonWebsite.UrlWebsite@item.PictureUrl'>
+                                    <img src="@CommonWebsite.UrlWebsite@item.PictureUrl" alt="@item.PictureAlias">
+                                </a>
+                            }
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.ProductDetail.Product.Offer))
+                    {
+                        <section class="abs label-product">
+                            <p class="sale-off">@Model.ProductDetail.Product.Offer</p>
+                        </section>
+                    }
+                </section>
+                <section class="col-md-6 col-sm-12 info-detail">
+                    <h1>@Model.ProductDetail.Product.ProductNameShowWeb</h1>
+                    <p class="star">
+                        @if (Model.ProductDetail.Product.Rating > 0)
+                        {
+                            for (int i = 0; i < Math.Round(Model.ProductDetail.Product.Rating, 0); i++)
+                            {
+                                <i class="material-icons">star</i>
+                            }
+                        }
+                    </p>
+                    <section class="price-product">
+                        @if (string.IsNullOrEmpty(Model.ProductDetail.Product.PriceOld) && (Model.ProductDetail.Product.PriceNew == "0" || string.IsNullOrEmpty(Model.ProductDetail.Product.PriceNew)))
+                        {
+                            <p class="price">Giá:  Liên hệ</p>
+                        }
+                        else
+                        {
+                            <p class="price">Giá:  @Html.Raw(Model.ProductDetail.Product.PriceNew != "0" ? Model.ProductDetail.Product.PriceNew : Model.ProductDetail.Product.PriceOld)</p>
+                            if (!string.IsNullOrEmpty(Model.ProductDetail.Product.PriceOld) && Model.ProductDetail.Product.PriceNew != "0")
+                            {
+                                <p class="price-old"><s>Giá cũ: @Model.ProductDetail.Product.PriceOld</s></p>
+                            }
+                        }
+                    </section>
+                    @if (Model.ProductDetail.Offers != null && Model.ProductDetail.Offers.Any())
+                    {
+                        Model.CardAdd.IsOffers = true;
+                        <section class="sale">
+                            <h3><img src="~/Content/image/icon-gif.png" alt="Gif"> Khuyến mãi</h3>
+
+                            <ul>
+                                @foreach (var item in Model.ProductDetail.Offers)
+                                {
+                                    <li data-id="@item.PromotionOfferId">@item.PromotionOfferName</li>
+                                }
+                            </ul>
+
+                        </section>
+                    }
+                    <ul class="list-detail">
+                        <li>Hãng sản xuất: @(Model.ProductDetail.Product.ManufactureName ?? "")</li>
+                        <li>Mã sản phẩm: @(Model.ProductDetail.Product.ProductCode ?? "")</li>
+                        <li>Tình trạng: Còn hàng</li>
+                    </ul>
+                    <section class="buy">
+                        <p>Số lượng:</p>
+                        @Html.Partial("ProductBuyAddPartial", Model.CardAdd)                   
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="info-detail-product">
+        <section class="container">
+            <section class="control-detail">
+                <ul>
+                    <li class="active li-scroll"><a href="#content">Mô tả</a></li>
+                    <li class="li-scroll"><a href="#tech">Thông số</a></li>
+                    <li class="li-scroll"><a href="#review">Đánh giá</a></li>
+                </ul>
+            </section>
+            <section class="content-detail">
+                <section class="detail" id="content">
+                    <section class="row">
+                        <section class="col-md-12 col-sm-12 fl-top-detail">
+                            <div>
+                                @Html.Raw((!string.IsNullOrEmpty(Model.ProductDetail.Product.ProductContentDetail) ? HttpUtility.HtmlDecode(Model.ProductDetail.Product.ProductContentDetail.Replace("&amp;", "&")
+                                      .Replace("&lt;", "<")
+                                      .Replace("&gt;", ">")
+                                      .Replace("&quot;", "\"")
+                                      .Replace("&#039;", "\'")) : "&nbsp;").ToString())
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <section class="clearfix"></section>
+                <section class="detail" id="tech">
+                    <section class="row">
+                        <section class="col-md-6 col-sm-12">
+                            <h2 class="title-about">Thông số</h2>
+                            <table class="table table-striped">
+                                @if (Model.ProductDetail.Attributes != null && Model.ProductDetail.Attributes.Any())
+                                {
+                                    foreach (var item in Model.ProductDetail.Attributes)
+                                    {
+                                        <tr>
+                                            <td>@Html.Raw(item.AttributeName ?? "&nbsp;")</td>
+                                            <td>
+                                                @Html.Raw(item.AttributeValues ?? "&nbsp;")&nbsp;
+                                                @Html.Raw(item.UnitName ?? "&nbsp;")
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </section>
+                    </section>
+                </section>
+                <section class="detail" id="review">
+                    <section class="top-review">
+                        <h2 class="title-about">Đánh giá</h2>
+                        @Html.Partial("ProductCommentAddPartial", Model.ProductCommentsAdd)
+                    </section>
+
+                    <section class="review" id="comment-product">
+                        @Html.Partial("ProductCommentListPartial", Model.ProductDetail)
+
+                    </section>
+                </section>
+                @if (Model.ProductRelate != null && Model.ProductRelate.Any())
+                {
+                    <section class="more-product all-product">
+                        <h2 class="title-about">Sản phẩm liên quan</h2>
+                        <section class="row">
+                            @foreach (var item in Model.ProductRelate)
+                            {
+                                <section class="col-lg-3 col-md-3 col-sm-6 col-m-5">
+                                    @Html.Partial("_ProductBox", item)
+                                </section>
+                            }
+                        </section>
+                    </section>
+                }
+            </section>
+        </section>
+    </section>
+}
+
+<!-- Modal Promotion-->
+<div class="modal fade" id="modalPromotion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">CHƯƠNG TRÌNH KHUYẾN MẠI</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @if (Model.ProductDetail != null && Model.ProductDetail.Offers != null && Model.ProductDetail.Offers.Count > 0)
+                {
+                    var ProOffers = Model.ProductDetail.Offers;
+                    var _IsPercentDisCount = false;
+                    var _IsDisCountBySetPrice = false;
+                    var _IsFixedGift = false;
+                    var _IsFixPrice = false;
+                    foreach (var item in ProOffers)
+                    {
+                        if (item.IsFixedGift)//quà tặng cố định
+                        {
+                            _IsFixedGift = true;
+                        }
+                        else if (item.IsDisCountBySetPrice) //Giá ưu đãi. áp dụng thay giá Khuyến mại 
+                        {
+                            _IsDisCountBySetPrice = true;
+                        }
+                        else if (item.IsPercentDisCount){ //giarm theo phần trăm
+                            _IsPercentDisCount = true;
+                        }
+                        else if (item.IsFixPrice) // Trừ tiền cứng. giảm giá cứng
+                        {
+                            _IsFixPrice = true;
+                        }
+                    }
+
+                    if (_IsFixedGift)
+                    {
+                        <div class="row">
+                            <div class="col-md-12 font-weight-bold">Danh sách quà tặng</div>
+                            <div id="div-quatang" class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Chọn</th>
+                                            <th>Mã Sản Phẩm</th>
+                                            <th>Tên Sản Phẩm</th>
+                                            @*<th>Khuyễn Mại</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var items in ProOffers)
+                                        {
+                                            if (items.IsFixedGift == true)
+                                            {
+                                                foreach (var item in items.ListGifts)
+                                                {
+                                                    <tr name="item" data-key="IsFixedGift" data-isapply="@items.IsApplyWithOrderPromotion"  data-keypromotionid="@items.PromotionId">
+                                                        <td>
+                                                            <input inp-key="IsFixedGift" data-key="inp-Offer" type="checkbox" value="@item.ProductId" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@items.PromotionId"
+                                                                   data-productgiftsid="@item.ProductGiftsId" data-productid="@Model.ProductDetail.Product.ProductId" data-discountvalue="0" />
+                                                        </td>
+                                                        <td>@item.ProductCode</td>
+                                                        <td>@item.ProductName</td>
+                                                        @*<td>Khuyễn Mại</td>*@
+                                                    </tr>
+                                                }
+
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    }
+                    if (_IsPercentDisCount || _IsDisCountBySetPrice || _IsFixPrice)
+                    {
+                        <div class="row">
+                            <div class="col-md-12 font-weight-bold">Mã giảm giá</div>
+                            <div id="div-magiamgia" class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Chọn</th>
+                                            <th>Khuyễn Mại</th>
+                                            <th>Giá trị</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in ProOffers)
+                                        {
+                                            if (item.IsFixPrice == true)
+                                            {
+                                                <tr name="item" data-key="IsFixPrice" data-isapply="@item.IsApplyWithOrderPromotion" data-keypromotionid="@item.PromotionId">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="VNĐ" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="@Model.ProductDetail.Product.ProductId" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@String.Format("{0:#,##0}", Convert.ToUInt64(item.DisCountValue)).Replace(',', '.')  VNĐ</td>
+                                                </tr>
+                                            }
+                                            if (item.IsPercentDisCount == true)
+                                            {
+                                                <tr name="item" data-key="IsPercentDisCount" data-isapply="@item.IsApplyWithOrderPromotion"  data-keypromotionid="@item.PromotionId">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="%" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="@Model.ProductDetail.Product.ProductId" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@item.DisCountValue %</td>
+                                                </tr>
+                                            }
+                                            if (item.IsDisCountBySetPrice == true) //Giá bán ưu đãi sản phẩm
+                                            {
+                                                <tr name="item" data-key="IsDisCountBySetPrice" data-isapply="@item.IsApplyWithOrderPromotion"  data-keypromotionid="@item.PromotionId">
+                                                    <td>
+                                                        <input data-key="inp-Offer" type="checkbox" data-values="@item.DisCountValue" data-type="VNĐ" data-promotionOfferid="@item.PromotionOfferId" data-promotionid="@item.PromotionId"
+                                                               data-productgiftsid="0" data-productid="@Model.ProductDetail.Product.ProductId" data-discountvalue="@item.DisCountValue" />
+                                                    </td>
+                                                    <td>@item.PromotionOfferName</td>
+                                                    <td>@String.Format("{0:#,##0}", Convert.ToUInt64(item.DisCountValue)).Replace(',', '.')  VNĐ</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    } 
+                } 
+            </div>
+            <div class="p-1 text-right">
+                <button type="button" id="SaveCartPromotion" class="btn btn-primary">Tiếp tục</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>

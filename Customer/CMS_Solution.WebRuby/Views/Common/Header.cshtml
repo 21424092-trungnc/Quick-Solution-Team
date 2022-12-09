@@ -1,0 +1,138 @@
+﻿@using Core.Common.UI;
+@using Core.Common.Utilities
+@using Business.Entities.Domain
+@using CMS_Solution.WebRuby.Common;
+@using CMS_Solution.WebRuby.Extensions;
+
+@model List<Business.Entities.Domain.MenuMap>
+@{
+    UserManager user = new UserManager();
+    if (Session[AppSetting.SessionUser] != null)
+    {
+
+        user = (UserManager)Session[AppSetting.SessionUser];
+    }
+}
+
+<section class="top-header">
+    <section class="container">
+        <section class="row">
+            <section class="col-lg-6 col-md-6">
+                <p><i class="fas fa-envelope"></i> Email: <u>cskh@quickteamsolution.vn</u> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-phone-alt"></i> 0352366360</p>
+            </section>
+            <section class="col-lg-6 col-md-6 text-right">
+                <p>
+
+                    @if (user == null || user.MemberID == 0)
+                    {
+                        <a href="/dang-nhap">Đăng nhập</a> <span class="p-1"> | </span> <a href="/dang-ky">Đăng ký</a>
+                    }
+                </p>
+            </section>
+        </section>
+    </section>
+</section>
+
+
+<header>
+    <section class="container mt-3">
+        <section class="row">
+            <section class="col-lg-9 col-md-8 col-sm-12 fl fl-center p-inhert">
+                @Html.Partial("Logo")
+                @Html.Partial("LogoMobi")
+                <ul class="main-menu">
+                    @if (Model != null)
+                    {
+                        var _lstMenu = (Model != null && Model.Count() > 0) ? Model : new List<Business.Entities.Domain.MenuMap>();
+                        foreach (var item in _lstMenu)
+                        {
+                            if (item.CateParentId == "0")
+                            {
+                                <li>
+                                    <a href="@item.Url.ToLower()">@item.CategoryName</a>
+                                </li>
+                            }
+                            else
+                            {
+
+                                var lst = from x in _lstMenu where Convert.ToInt64(x.CateParentId) == item.WebcategoryId select x;
+                                <li>
+                                    <a href="#">@item.CategoryName</a>
+                                    @if (lst != null && lst.Count() > 0)
+                                    {
+                                        <ul class="sub-menu">
+                                            @foreach (var _item in lst)
+                                            {
+                                                <li>
+                                                    @if (_item.Catalog == "WebsiteCategory")
+                                                    {
+                                                        <a href="@_item.Url.ToLower()">@_item.CategoryName</a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a href="@Url.RouteUrl(_item.Catalog, new { SeName = _item.Url.ToLower() })">@_item.CategoryName</a>
+                                                    }
+                                                    @{
+                                                        var _lst = from x in _lstMenu where Convert.ToInt64(x.CateParentId) == _item.WebcategoryId select x;
+                                                    }
+                                                    @if (_lst != null && _lst.Count() > 0)
+                                                    {
+                                                        <ul>
+
+                                                            @foreach (var __item in _lst)
+                                                            {
+                                                                if (!string.IsNullOrEmpty(__item.CategoryName))
+                                                                {
+                                                                    if (__item.Catalog == "WebsiteCategory")
+                                                                    {
+                                                                        <li><a href="@__item.Url.ToLower()">@__item.CategoryName</a></li>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <li><a href="@Url.RouteUrl(__item.Catalog, new { SeName = __item.Url.ToLower() })">@__item.CategoryName</a></li>
+                                                                    }
+                                                                }
+                                                            }
+                                                        </ul>
+                                                    }
+                                                </li>
+                                            }
+                                        </ul>
+                                    }
+                                </li>
+                            }
+                        }
+                    }
+                </ul>
+            </section>
+            <section class="col-lg-3 col-md-4 col-sm-12 fl fl-center txt-right fl-end mobile-abs">
+                <form>
+                    <input type="text" name="tukhoa" id="tukhoa" placeholder="Tìm kiếm" class="input_SearchProduct">
+                    <button type="button" data-url="@Url.Action("ProductSearch", "Product")" class="btn_SearchProduct"><img src="~/Content/image/icon-search.png" alt="Search"></button>
+                </form>
+                @if (user.MemberID == null || user.MemberID == 0)
+                {
+                    <a href="/dang-nhap" class="account"><i class="material-icons">person_add</i></a>
+                }
+                else
+                {
+                    if (user.ImageAvatar != null && user.ImageAvatar != "")
+                    {
+                        <a class="account account-login"><img src="@CommonWebsite.UrlWebsite@user.ImageAvatar"></a>
+                    }
+                    else
+                    {
+                        <a class="account account-login"><img src="~/Content/image/avatar.png"></a>
+                    }
+                    <ul class="account-control" style="overflow: hidden; display: none;">
+                        @*<li><a href="#">Thông tin tài khoản</a></li>*@
+                        <li><a href="@Url.Action("LogoutAccount","Customer")">Đăng xuất</a></li>
+                    </ul>
+
+                }
+                <a href="@Url.Action("Index","Cart")" class="cart-head" title="Tổng số lượng sản phầm"><i class="material-icons">shopping_cart</i><span class="count-product-order">0</span></a>
+            </section>
+        </section>
+    </section>
+</header>
+

@@ -1,0 +1,60 @@
+﻿@using Core.Common.UI;
+@model  CMS_Solution.WebRuby.ServiceViewModel
+@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+    Html.AddTitleParts("Cung cấp giáo viên-Quick Solution Team");
+}
+<section class="background-about mt-2">
+    <section class="bg-about">
+        <h1></h1>
+    </section>
+</section>
+<section class="container mg-crumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.RouteUrl("HomePage")">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="@Url.RouteUrl("Service")">Dịch vụ</a></li>
+        <li class="breadcrumb-item active">Cung cấp giáo viên</li>
+    </ul>
+</section>
+<section class="news-home">
+    <section class="container">
+        <section class="row justify-content-center">
+            @Html.Raw((Model.staticContentMap != null ? (Model.staticContentMap.StaticTitle.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : ""))
+        </section>
+        <section class="content-news">
+            @Html.Raw((Model.staticContentMap != null ? (Model.staticContentMap.StaticContent.Replace("&amp;", "&")
+                                             .Replace("&lt;", "<")
+                                             .Replace("&gt;", ">")
+                                             .Replace("&quot;", "\"")
+                                             .Replace("&#039;", "\'") ?? "") : ""))
+        </section>
+        <section class="more-service row justify-content-center">
+            <section class="col-md-10">
+                <h2 class="title-about">Dịch vụ khác</h2>
+                <section class="row">
+                    @if (Model != null)
+                    {
+                        var _lstService = (Model.lstService.Count() > 0) ? Model.lstService : new List<Business.Entities.Domain.ServiceMap>();
+                        foreach (var item in _lstService)
+                        {
+                            if (item.Key != "ProvidingTeachers")
+                            {
+                                <section class="col-md-4 col-sm-12">
+                                    <a class="service" href="@Url.RouteUrl(item.Key)">
+                                        <img src="@item.Image" alt="Service">
+                                        <h2><span class="text-uppercase">@item.ServiceTitle</span></h2>
+                                        <p>@item.Content</p>
+                                    </a>
+                                </section>
+                            }
+                        }
+                    }
+                </section>
+            </section>
+        </section>
+    </section>
+</section>

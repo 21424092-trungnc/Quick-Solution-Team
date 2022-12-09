@@ -1,0 +1,10 @@
+﻿@using CMS_Solution.WebRuby.Common
+@{
+    SelectListItem banner = CommonWebsite.GetCBODungChung(new Business.Entities.CBO_DungChungParam { TableName = "CMS_BANNERHOMECENTER", ParentID = "1009" }) != null ? CommonWebsite.GetCBODungChung(new Business.Entities.CBO_DungChungParam { TableName = "CMS_BANNERHOMECENTER", ParentID = "1009" }).FirstOrDefault() : new SelectListItem();
+}
+
+<section class="ads-des txt-center">
+    <a href="javascript(0)">
+        <img src="@((banner !=null && !string.IsNullOrEmpty(banner.Value)) ? CommonWebsite.UrlWebsite + banner.Value : "")" alt="@((banner !=null && !string.IsNullOrEmpty(banner.Text)) ? banner.Text : "")">
+    </a>
+</section>

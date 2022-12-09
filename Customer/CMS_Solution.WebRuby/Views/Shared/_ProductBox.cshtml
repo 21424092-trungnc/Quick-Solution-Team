@@ -1,0 +1,69 @@
+﻿@using CMS_Solution.WebRuby.Common;
+@model Business.Entities.Domain.ProductMap
+@{ 
+    string UrlImage = !string.IsNullOrEmpty(Model.PictureUrl) ? CommonWebsite.UrlWebsite + Model.PictureUrl : "";
+}
+<section class="product">
+    <a href="@Url.RouteUrl("Product", new { SeName = (Model.SeoName.ToLower()??"")})" title="@(Model.PictureUrlAlias??"")">
+        <img src="@UrlImage" alt="@Model.PictureUrlAlias">
+    </a>
+    <section class="info-product">
+        <p>
+            @if (Model.Rating.ToString() != "" && Model.Rating > 0)
+            {
+                for (int i = 0; i < Math.Round(Model.Rating, 0); i++)
+                {
+                    <i class="material-icons">star</i>
+                }
+                if (Math.Round(Model.Rating, 0) < 5)
+                {
+                    for (int i = 0; i < (5 - Math.Round(Model.Rating, 0)); i++)
+                    {
+                        <i class="material-icons none-color">star</i>
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    <i class="material-icons none-color">star</i>
+                }
+            }
+        </p>
+        <h3><a href="@Url.RouteUrl("Product", new { SeName = Model.SeoName.ToLower() })" title="@Model.ProductNameShowWeb" id="@Model.ProductId">@Model.ProductNameShowWeb</a></h3>
+        <p class="price">
+            @if (string.IsNullOrEmpty(Model.PriceOld) && (Model.PriceNew == "0" || string.IsNullOrEmpty(Model.PriceNew)))
+            {
+                @Html.Raw("Liên hệ")
+            }
+            else
+            {
+                @Html.Raw(Model.PriceNew != "0" ? Model.PriceNew : Model.PriceOld)
+                if (!string.IsNullOrEmpty(Model.PriceOld) && Model.PriceNew != "0")
+                {
+                    <span class="proice-old">@Model.PriceOld</span>
+                }
+            }
+        </p>
+        <a  href="@Url.RouteUrl("Product", new { SeName = Model.SeoName.ToLower() })" title="@Model.ProductNameShowWeb" data-id="@Model.ProductId" class="buy">Chi tiết</a>
+        @*<a href="javascript:void(0)" data-id="@Model.ProductId" class="buy buyAdd">Mua ngay</a>*@
+    </section>
+    <section class="abs label-product">
+        @if (Model.Isnews)
+        {
+            <p>News</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Offer))
+        {
+            if (Model.Offer == "Quà")
+            {
+                <p class="sale-off"><i class="fas fa-gift"></i></p>
+            }
+            else
+            {
+                <p class="sale-off">@Model.Offer</p>
+            }
+        }
+    </section>
+</section>

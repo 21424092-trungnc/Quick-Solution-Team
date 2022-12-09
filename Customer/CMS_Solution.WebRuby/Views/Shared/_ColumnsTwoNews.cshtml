@@ -1,0 +1,26 @@
+﻿@using CMS_Solution.WebRuby.Common
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+    SelectListItem banner = CommonWebsite.GetCBODungChung(new Business.Entities.CBO_DungChungParam { TableName = "CMS_BANNER", ParentID = "8" }).FirstOrDefault();
+    banner = banner != null ? banner : new SelectListItem();
+}
+@if (IsSectionDefined("Breadcrumb"))
+{
+    @section Breadcrumb {
+        @RenderSection("Breadcrumb")
+    }
+}
+<section class="news-home">
+    <section class="container">
+        <section class="row">
+            <section class="col-md-3 col-sm-12 sidebar right">
+                <h3>Danh mục tin tức</h3>
+                <div class="partial-content" data-url="@Url.Action("CateNewsNavigation", "News")"></div>
+                <a href="@((banner !=null && !string.IsNullOrEmpty(banner.Value)) ? CommonWebsite.UrlWebsite + banner.Value : "")"><img src="@((banner !=null && !string.IsNullOrEmpty(banner.Value)) ? CommonWebsite.UrlWebsite + banner.Value : "")" align="@((banner !=null && !string.IsNullOrEmpty(banner.Text)) ? banner.Text : "")" /></a>
+            </section>
+            <section class="col-md-9 col-sm-12">
+                @RenderBody()
+            </section>
+        </section>
+    </section>
+</section>
