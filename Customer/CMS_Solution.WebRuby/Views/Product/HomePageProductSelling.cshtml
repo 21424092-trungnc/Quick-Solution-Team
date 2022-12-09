@@ -12,7 +12,7 @@
                 @foreach (var item in Model)
                 {
                     string UrlImage = !string.IsNullOrEmpty(item.PictureUrl) ? CommonWebsite.UrlWebsite + item.PictureUrl : "";
-                    <section class="col-lg-3 col-md-3 col-sm-6 col-m-5">
+                    <section class="col-lg-3 col-md-3 col-sm-3 col-m-5">
                         <section class="product">
                             <a href="@Url.RouteUrl("Product", new { SeName = (item.SeoName ??"")})" title="@(item.PictureUrlAlias??"")">
                                 <img src="@UrlImage" alt="@item.PictureUrlAlias">

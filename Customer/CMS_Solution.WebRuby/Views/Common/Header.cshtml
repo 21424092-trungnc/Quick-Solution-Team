@@ -37,7 +37,7 @@
 <header>
     <section class="container mt-3">
         <section class="row">
-            <section class="col-lg-9 col-md-8 col-sm-12 fl fl-center p-inhert">
+            <section class="col-lg-9 col-md-8 col-sm-8 fl fl-center p-inhert">
                 @Html.Partial("Logo")
                 @Html.Partial("LogoMobi")
                 <ul class="main-menu">
@@ -105,12 +105,12 @@
                     }
                 </ul>
             </section>
-            <section class="col-lg-3 col-md-4 col-sm-12 fl fl-center txt-right fl-end mobile-abs">
+            <section class="col-lg-3 col-md-4 col-sm-4 fl fl-center txt-right fl-end mobile-abs">
                 <form>
                     <input type="text" name="tukhoa" id="tukhoa" placeholder="Tìm kiếm" class="input_SearchProduct">
                     <button type="button" data-url="@Url.Action("ProductSearch", "Product")" class="btn_SearchProduct"><img src="~/Content/image/icon-search.png" alt="Search"></button>
                 </form>
-                @if (user.MemberID == null || user.MemberID == 0)
+                @if (user.MemberID == 0)
                 {
                     <a href="/dang-nhap" class="account"><i class="material-icons">person_add</i></a>
                 }
